@@ -6,58 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How to Start â€” The Alchemist's Path</title>
 <style>
-/* The Alchemist's Path â€” Signature Background (premium)
-   Universal page background. <link rel="stylesheet" href="assets/starlight-background.css"> */
-
-html, body { margin: 0; height: 100%; }
-
-  /* ---- Background ---- */
-  .alchemist-bg {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    overflow: hidden;
-    pointer-events: none;
-    /* luminous center â†’ soft periwinkle edges for depth (premium vignette) */
-    background:
-      radial-gradient(130% 95% at 50% 28%,
-        #ffffff 0%, #f6f9ff 34%, #eaf1ff 64%, #dde8ff 86%, #d2e0ff 100%);
-  }
-  /* primary moonlight + sky blooms */
-  .alchemist-bg__glow {
-    position: absolute;
-    inset: -14%;
-    background:
-      radial-gradient(42vw 42vw at 15% 8%,  rgba(150,188,255,0.62) 0%, rgba(150,188,255,0) 60%),
-      radial-gradient(50vw 50vw at 88% 18%, rgba(190,214,255,0.55) 0%, rgba(190,214,255,0) 62%),
-      radial-gradient(46vw 44vw at 8% 94%,  rgba(116,158,245,0.34) 0%, rgba(116,158,245,0) 60%);
-    will-change: transform, opacity;
-    animation: alchemist-breathe 26s cubic-bezier(.4,0,.2,1) infinite alternate;
-  }
+/* primary moonlight + sky blooms */
   /* still-water reflection band near the bottom */
-  .alchemist-bg__water {
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    height: 44%;
-    background: linear-gradient(180deg, rgba(214,229,255,0) 0%, rgba(202,222,255,0.40) 50%, rgba(178,206,255,0.62) 100%);
-    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 40%);
-            mask-image: linear-gradient(180deg, transparent 0%, #000 40%);
-  }
   /* polished top sheen */
-  .alchemist-bg__sheen {
-    position: absolute;
-    left: 0; right: 0; top: 0;
-    height: 32%;
-    background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
-  }
   /* soft framing vignette in pale blue (keeps focus on content) */
-  .alchemist-bg__vignette {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(120% 120% at 50% 42%, rgba(210,224,255,0) 58%, rgba(186,209,255,0.5) 100%);
-  }
-  .alchemist-bg__stars { position: absolute; inset: 0; width: 100%; height: 100%; }
-
   @keyframes alchemist-breathe {
     from { transform: translate3d(-1.5%,-1%,0) scale(1);    opacity: .92; }
     to   { transform: translate3d(2%,1.5%,0)   scale(1.07); opacity: 1; }
@@ -100,7 +52,7 @@ a:hover{opacity:.8;}
 .mobile-menu.open{display:flex;}
 .btn-primary{background:linear-gradient(135deg,#FFD700 0%,#C8A400 50%,#FFD700 100%);background-size:200% auto;color:#0A0A0F;font-family:var(--font-head);font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 2.5rem;border-radius:3px;border:none;cursor:pointer;transition:background-position .4s,box-shadow .3s,transform .2s;text-decoration:none;display:inline-block;}
 .btn-primary:hover{background-position:right center;box-shadow:0 0 30px rgba(255,215,0,.5);transform:translateY(-2px);color:#0A0A0F;}
-.btn-outline{background:transparent;color:var(--gold);font-family:var(--font-head);font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;padding:.9rem 2.5rem;border-radius:3px;border:2px solid var(--gold);cursor:pointer;transition:background .3s,box-shadow .3s,transform .2s;text-decoration:none;display:inline-block;}
+.btn-outline{background:#1B5FC7;color:#fff;font-family:var(--font-head);font-weight:700;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;padding:1rem 3rem;border-radius:3px;border:none;cursor:pointer;transition:box-shadow .3s,transform .2s;text-decoration:none;display:inline-block}
 .btn-outline:hover{background:rgba(255,215,0,.08);box-shadow:0 0 20px rgba(255,215,0,.2);transform:translateY(-2px);color:var(--gold);}
 .page-hero{padding:9rem 1.5rem 4rem;text-align:center;}
 .page-hero-inner{max-width:780px;margin:0 auto;}
@@ -262,137 +214,6 @@ a:hover{opacity:.8;}
 </footer>
 
 <script>
-/* The Alchemist's Path â€” Signature Background (premium twinkle field)
-   Depth-layered, parallax starlight with soft bokeh light and rare
-   diffraction-spike sparkles, in pale blue / white / faint gold.
-   Auto-mounts a fixed `.alchemist-bg` layer (or attaches to one you place).
-   Tune via data-density / data-speed. DPR-aware, pauses when hidden,
-   honors prefers-reduced-motion. */
-(function () {
-  'use strict';
-  var STAR = [[150,188,255],[190,214,255],[120,158,245],[240,245,255],[236,211,145],[200,150,10]];
-  var BOKEH = [[170,200,255],[200,220,255],[236,214,150]];
-  function rnd(a,b){ return a + Math.random()*(b-a); }
-
-  function Field(canvas, host) {
-    this.canvas = canvas; this.host = host; this.ctx = canvas.getContext('2d');
-    this.density = parseFloat(host.getAttribute('data-density') || 1);
-    this.speed = parseFloat(host.getAttribute('data-speed') || 1);
-    this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    this.dpr = Math.min(window.devicePixelRatio || 1, 2);
-    this.stars = []; this.bokeh = []; this.t = 0; this.last = 0; this.raf = null; this.running = false;
-    this.resize = this.resize.bind(this); this.tick = this.tick.bind(this);
-    this.resize();
-    addEventListener('resize', this.resize, { passive: true });
-    document.addEventListener('visibilitychange', function(){ document.hidden ? this.stop() : this.start(); }.bind(this));
-    this.reduced ? this.draw(true) : this.start();
-  }
-  Field.prototype.build = function () {
-    var w=this.w, h=this.h, area=w*h, i;
-    var n = Math.max(60, Math.min(260, Math.round(area/7600 * this.density)));
-    this.stars = [];
-    for (i=0;i<n;i++){
-      var roll = Math.random();
-      var idx = roll<.28?0 : roll<.48?1 : roll<.62?2 : roll<.84?3 : roll<.965?4 : 5;
-      var z = Math.random();
-      var r = rnd(.5,.9) + z*(idx>=4?1.5:1.8);
-      this.stars.push({
-        x: Math.random()*w, y: Math.random()*h, z: z, r: r,
-        baseA: rnd(.30,.55) + z*0.4,
-        tw: rnd(.4,1.7), phase: rnd(0,Math.PI*2),
-        vx: rnd(-.025,.025)*this.speed*(0.4+z),
-        vy: rnd(-.025,.025)*this.speed*(0.4+z),
-        c: STAR[idx], halo: r > 0.95,
-        spike: r > 1.05 || idx>=4
-      });
-    }
-    var bn = Math.max(5, Math.min(14, Math.round(area/150000 * this.density)));
-    this.bokeh = [];
-    for (i=0;i<bn;i++){
-      var bz = Math.random();
-      this.bokeh.push({
-        x: Math.random()*w, y: Math.random()*h,
-        r: rnd(46,120) * (0.6+bz), a: rnd(0.05,0.12),
-        tw: rnd(0.15,0.5), phase: rnd(0,Math.PI*2),
-        vx: rnd(-.02,.02)*this.speed, vy: rnd(-.02,.02)*this.speed,
-        c: BOKEH[(Math.random()<0.18)?2:(Math.random()<0.5?0:1)]
-      });
-    }
-  };
-  Field.prototype.resize = function () {
-    this.w = this.host.clientWidth || innerWidth;
-    this.h = this.host.clientHeight || innerHeight;
-    this.canvas.width = Math.floor(this.w*this.dpr);
-    this.canvas.height = Math.floor(this.h*this.dpr);
-    this.ctx.setTransform(this.dpr,0,0,this.dpr,0,0);
-    this.build();
-    if (this.reduced) this.draw(true);
-  };
-  Field.prototype.disc = function (b, a) {
-    var ctx=this.ctx, col=b.c[0]+','+b.c[1]+','+b.c[2];
-    var g=ctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r);
-    g.addColorStop(0,'rgba('+col+','+a+')'); g.addColorStop(.6,'rgba('+col+','+(a*.4)+')'); g.addColorStop(1,'rgba('+col+',0)');
-    ctx.fillStyle=g; ctx.beginPath(); ctx.arc(b.x,b.y,b.r,0,7); ctx.fill();
-  };
-  Field.prototype.spike = function (s, a) {
-    var ctx=this.ctx, col=s.c[0]+','+s.c[1]+','+s.c[2], len=s.r*8;
-    var g=ctx.createLinearGradient(s.x-len,s.y,s.x+len,s.y);
-    g.addColorStop(0,'rgba('+col+',0)'); g.addColorStop(.5,'rgba('+col+','+(a*.65)+')'); g.addColorStop(1,'rgba('+col+',0)');
-    ctx.strokeStyle=g; ctx.lineWidth=.9;
-    ctx.beginPath(); ctx.moveTo(s.x-len,s.y); ctx.lineTo(s.x+len,s.y); ctx.stroke();
-    var g2=ctx.createLinearGradient(s.x,s.y-len,s.x,s.y+len);
-    g2.addColorStop(0,'rgba('+col+',0)'); g2.addColorStop(.5,'rgba('+col+','+(a*.65)+')'); g2.addColorStop(1,'rgba('+col+',0)');
-    ctx.strokeStyle=g2;
-    ctx.beginPath(); ctx.moveTo(s.x,s.y-len); ctx.lineTo(s.x,s.y+len); ctx.stroke();
-  };
-  Field.prototype.star = function (s, a) {
-    var ctx=this.ctx, col=s.c[0]+','+s.c[1]+','+s.c[2];
-    if (s.halo) {
-      var rg=ctx.createRadialGradient(s.x,s.y,0,s.x,s.y,s.r*6);
-      rg.addColorStop(0,'rgba('+col+','+(a*.55)+')'); rg.addColorStop(1,'rgba('+col+',0)');
-      ctx.fillStyle=rg; ctx.beginPath(); ctx.arc(s.x,s.y,s.r*6,0,7); ctx.fill();
-    }
-    if (s.spike && a>0.22) this.spike(s,a);
-    ctx.fillStyle='rgba('+col+','+a+')';
-    ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,7); ctx.fill();
-  };
-  Field.prototype.draw = function (stat) {
-    var ctx=this.ctx, i, s, b; ctx.clearRect(0,0,this.w,this.h);
-    for (i=0;i<this.bokeh.length;i++){ b=this.bokeh[i]; this.disc(b, stat ? b.a : b.a*(.7+.3*Math.sin(this.t*b.tw+b.phase))); }
-    for (i=0;i<this.stars.length;i++){ s=this.stars[i]; this.star(s, stat ? s.baseA : Math.max(0, s.baseA*(.5+.5*Math.sin(this.t*s.tw+s.phase)))); }
-  };
-  Field.prototype.tick = function (now) {
-    if (!this.running) return;
-    var dt = this.last ? (now-this.last)/1000 : .016; this.last=now; this.t+=dt;
-    var i, s, b;
-    for (i=0;i<this.bokeh.length;i++){ b=this.bokeh[i]; b.x+=b.vx; b.y+=b.vy;
-      if (b.y<-b.r) b.y=this.h+b.r; if (b.y>this.h+b.r) b.y=-b.r; if (b.x<-b.r) b.x=this.w+b.r; if (b.x>this.w+b.r) b.x=-b.r; }
-    for (i=0;i<this.stars.length;i++){ s=this.stars[i]; s.x+=s.vx; s.y+=s.vy;
-      if (s.y<-10) s.y=this.h+10; if (s.y>this.h+10) s.y=-10; if (s.x<-10) s.x=this.w+10; if (s.x>this.w+10) s.x=-10; }
-    this.draw(false);
-    this.raf=requestAnimationFrame(this.tick);
-  };
-  Field.prototype.start = function (){ if(this.running||this.reduced) return; this.running=true; this.last=0; this.raf=requestAnimationFrame(this.tick); };
-  Field.prototype.stop = function (){ this.running=false; if(this.raf) cancelAnimationFrame(this.raf); };
-
-  function build(host) {
-    host.classList.add('alchemist-bg');
-    if (host.querySelector('.alchemist-bg__stars')) return;
-    ['alchemist-bg__glow','alchemist-bg__glow alchemist-bg__glow--gold','alchemist-bg__sheen'].forEach(function(c){
-      var d=document.createElement('div'); d.className=c; host.appendChild(d);
-    });
-    var canvas=document.createElement('canvas'); canvas.className='alchemist-bg__stars'; host.appendChild(canvas);
-    ['alchemist-bg__water','alchemist-bg__vignette'].forEach(function(c){
-      var d=document.createElement('div'); d.className=c; host.appendChild(d);
-    });
-    return new Field(canvas, host);
-  }
-  };
-
-  })();
-
-</script>
-<script>
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);});
 (function(){var p=window.location.pathname.replace(/\/$/,'')||'/';document.querySelectorAll('.nav-links a:not(.nav-cta):not(.nav-login)').forEach(function(a){a.classList.remove('active');try{var ap=new URL(a.href,window.location.origin).pathname.replace(/\/$/,'')||'/';if(ap===p)a.classList.add('active');}catch(e){}});})();
@@ -536,7 +357,7 @@ function tapRespond(q){
     } else if(/group|12 for 12|community|biweekly|meeting/i.test(ql)){
       tapBot("<strong>12 for 12 Group</strong> â€” 12-month programme with Andrew. Biweekly meetings + community. <a href='lightbluealchemist_group.html'>Learn more &rarr;</a>");
     } else if(/andrew|who is|trainer|coach/i.test(ql)){
-      tapBot("Andrew Porteous â€” trainer, coach, 35+ years experience. Financially free at 40. Based in Germany. <a href='lightbluealchemist_about.html'>His story &rarr;</a>");
+      tapBot("Andrew A. Porteous â€” trainer, coach, 35+ years experience. Financially free at 40. Based in Germany. <a href='lightbluealchemist_about.html'>His story &rarr;</a>");
     } else if(/modules|courses|lessons|curriculum/i.test(ql)){
       tapBot("<strong>12 modules per level.</strong> Module 1 = free assessment. Modules 2â€“11 = learning. Module 12 = final assessment. Lead level available now.");
     } else if(/certificate|cert|completion/i.test(ql)){
