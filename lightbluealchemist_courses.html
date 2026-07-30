@@ -300,7 +300,7 @@ a:hover{opacity:.8;}
 .cc-btn{margin-top:.35rem;font-family:var(--font-head);font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:9px 0;border-radius:3px;border:none;cursor:pointer;text-align:center;display:block;width:100%;transition:all .25s;}
 .cc-btn.btn-free{background:linear-gradient(135deg,#FFD700,#C8A400);color:#0A0A0F;}
 .cc-btn.btn-free:hover{box-shadow:0 0 18px rgba(255,215,0,.4);}
-.cc-btn.btn-unlock{background:transparent;color:var(--gold);border:1.5px solid rgba(200,150,10,.45);}
+.cc-btn.btn-unlock{background:#1B5FC7;color:#fff;border:none;}
 .cc-btn.btn-unlock:hover{background:rgba(200,150,10,.07);border-color:var(--gold);}
 .cc-btn.btn-group{background:transparent;color:#3A7A4E;border:1.5px solid rgba(58,122,78,.4);}
 .cc-btn.btn-group:hover{background:rgba(58,122,78,.07);}
@@ -791,9 +791,9 @@ function filterCourses(cat) {
 #pay-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.72);align-items:center;justify-content:center;padding:1rem;}
 #pay-modal.open{display:flex;}
 .pay-card{background:#07091A;border-radius:14px;border:2px solid #C8960A;max-width:430px;width:100%;padding:2.5rem 2rem 2rem;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.28);}
-.pay-close{position:absolute;top:1rem;right:1.1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#4A6282;line-height:1;}
-.pay-title{font-family:'Cinzel',serif;font-size:1.15rem;color:#0D1B35;margin:0 0 .3rem;text-align:center;}
-.pay-desc{text-align:center;color:#4A6282;font-size:.82rem;margin:0 0 .5rem;}
+.pay-close{position:absolute;top:1rem;right:1.1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#8896B0;line-height:1;}
+.pay-title{font-family:'Cinzel',serif;font-size:1.15rem;color:#E8E4D8;margin:0 0 .3rem;text-align:center;}
+.pay-desc{text-align:center;color:#8896B0;font-size:.82rem;margin:0 0 .5rem;}
 .pay-price{font-size:2rem;font-weight:700;color:#C8960A;text-align:center;margin:0 0 1.5rem;font-family:'Cinzel',serif;}
 .pay-btn-stripe{display:flex;align-items:center;justify-content:center;gap:.6rem;background:#635BFF;color:#fff;border-radius:8px;padding:.9rem 1.5rem;width:100%;font-weight:600;font-size:.9rem;margin-bottom:.75rem;border:none;cursor:pointer;transition:opacity .2s;}
 .pay-btn-stripe:hover{opacity:.88;}
@@ -802,8 +802,8 @@ function filterCourses(cat) {
 .pay-or{display:flex;align-items:center;gap:.75rem;margin:.6rem 0;color:#9CA3AF;font-size:.75rem;}
 .pay-or::before,.pay-or::after{content:'';flex:1;height:1px;background:#E5E7EB;}
 .pay-secure{font-size:.68rem;color:#9CA3AF;text-align:center;margin-top:1rem;}
-.pay-back{background:none;border:none;color:#4A6282;font-size:.8rem;cursor:pointer;padding:0 0 1rem;display:flex;align-items:center;gap:.3rem;}
-.pay-input{width:100%;border:1.5px solid #E5E7EB;border-radius:8px;padding:.75rem 1rem;font-size:.9rem;outline:none;margin-bottom:.75rem;box-sizing:border-box;transition:border-color .2s;font-family:inherit;color:#0D1B35;}
+.pay-back{background:none;border:none;color:#8896B0;font-size:.8rem;cursor:pointer;padding:0 0 1rem;display:flex;align-items:center;gap:.3rem;}
+.pay-input{width:100%;border:1.5px solid #E5E7EB;border-radius:8px;padding:.75rem 1rem;font-size:.9rem;outline:none;margin-bottom:.75rem;box-sizing:border-box;transition:border-color .2s;font-family:inherit;color:#E8E4D8;}
 .pay-input:focus{border-color:#C8960A;}
 .pay-row{display:flex;gap:.75rem;}
 .pay-row .pay-input{flex:1;}
@@ -894,7 +894,7 @@ function filterCourses(cat) {
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M5 15l7 7L25 7" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h2 class="pay-title" style="margin-bottom:.5rem;">Payment Gateway Ready</h2>
-        <p style="color:#4A6282;font-size:.84rem;line-height:1.6;margin-bottom:1.5rem;">The checkout flow is wired and working.<br>Add live credentials to go live.</p>
+        <p style="color:#8896B0;font-size:.84rem;line-height:1.6;margin-bottom:1.5rem;">The checkout flow is wired and working.<br>Add live credentials to go live.</p>
         <button onclick="closePayModal()" class="pay-submit">Done</button>
       </div>
     </div>
