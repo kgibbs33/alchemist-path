@@ -7,15 +7,16 @@
 <title>Login — The Alchemist's Path</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Great+Vibes&display=swap');
-:root{--gold:#C8960A;--gold2:#A07800;--text:#0D1B35;--muted:#4A6282;--bg:rgba(255,255,255,0.55);--bg2:rgba(200,220,255,0.52);--bg3:rgba(160,194,255,0.42);--border:rgba(200,150,10,.3);--font-head:'Cinzel',serif;--font-body:'Lato',sans-serif;--font-quote:'Great Vibes',cursive;}
+:root{--gold:#C8960A;--gold2:#A07800;--text:#E8E4D8;--muted:#8896B0;--bg:#07091A;--bg2:#090D25;--bg3:#0C1135;--border:rgba(200,150,10,.3);--font-head:'Cinzel',serif;--font-body:'Lato',sans-serif;--font-quote:'Great Vibes',cursive;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--font-body);overflow-x:hidden;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem 1.5rem;}
+html,body{background:#07091A;}
+body{font-family:var(--font-body);overflow-x:hidden;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem 1.5rem;background:#07091A;}
 .tap-root{width:100%;display:flex;align-items:center;justify-content:center;}
 
 .login-wrap{width:100%;max-width:420px;}
 .login-logo{text-align:center;margin-bottom:2rem;}
 .login-logo-text{font-family:var(--font-head);font-size:.85rem;font-weight:700;color:#b8972a;letter-spacing:.08em;}
-.login-logo-sub{font-family:var(--font-body);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:#2c2c3e;opacity:.7;margin-top:.2rem;}
+.login-logo-sub{font-family:var(--font-body);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:#E8E4D8;opacity:.7;margin-top:.2rem;}
 .gold-line{width:40px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:.75rem auto;}
 
 .login-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:2.5rem 2rem;position:relative;overflow:hidden;}
@@ -43,7 +44,7 @@ body{font-family:var(--font-body);overflow-x:hidden;min-height:100vh;display:fle
 .login-register{text-align:center;font-size:.83rem;color:var(--muted);}
 .login-register a{color:var(--gold);font-family:var(--font-head);font-size:.75rem;font-weight:700;letter-spacing:.06em;}
 
-.login-type-btn{font-family:var(--font-head);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:3px;border:1.5px solid rgba(200,150,10,.3);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s;}
+.login-type-btn{font-family:var(--font-head);font-size:.58rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:3px;border:1.5px solid rgba(200,150,10,.3);background:transparent;color:#E8E4D8;cursor:pointer;transition:all .2s;}
 .login-type-btn:hover{border-color:var(--gold);color:var(--gold);}
 .login-type-btn.active{background:var(--gold);border-color:var(--gold);color:#0A0A0F;}
 .back-home{display:block;text-align:center;margin-top:1.25rem;font-family:var(--font-body);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);transition:color .2s;}
@@ -78,7 +79,6 @@ html, body { margin: 0; height: 100%; }
     will-change: transform, opacity;
     animation: alchemist-breathe 26s cubic-bezier(.4,0,.2,1) infinite alternate;
   }
-  .alchemist-bg__glow--gold { display: none; }
   /* still-water reflection band near the bottom */
   .alchemist-bg__water {
     position: absolute;
@@ -112,8 +112,7 @@ html, body { margin: 0; height: 100%; }
     to   { transform: translate3d(-2%,-1.5%,0) scale(1);  opacity: .9; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .alchemist-bg__glow, .alchemist-bg__glow--gold { animation: none; }
-  }
+    .alchemist-bg__glow, }
 
 </style>
 </head>
@@ -123,7 +122,7 @@ html, body { margin: 0; height: 100%; }
 
     <div class="login-logo">
       <div class="login-logo-text">The Alchemists Path</div>
-      <div class="login-logo-sub">by Andrew Porteous</div>
+      <div class="login-logo-sub">by Andrew A. Porteous</div>
       <div class="gold-line"></div>
     </div>
 
@@ -134,7 +133,7 @@ html, body { margin: 0; height: 100%; }
         <button onclick="setLoginType(this,'Member')" class="login-type-btn active" style="flex:1;min-width:80px;">Member</button>
         <button onclick="setLoginType(this,'Affiliate')" class="login-type-btn" style="flex:1;min-width:80px;">Affiliate</button>
         <button onclick="setLoginType(this,'Admin')" class="login-type-btn" style="flex:1;min-width:80px;">Admin</button>
-        <button onclick="setLoginType(this,'Community')" class="login-type-btn" style="flex:1;min-width:80px;">Community</button>
+        <button onclick="setLoginType(this,'Community')" class="login-type-btn" style="flex:1;min-width:100px;">Community</button>
       </div>
 
       <h1 class="login-title" id="loginTitle" style="display:none;"></h1>
@@ -309,12 +308,9 @@ html, body { margin: 0; height: 100%; }
     });
     return new Field(canvas, host);
   }
-  window.AlchemistBackground = { mount: function(el){ var h=typeof el==='string'?document.querySelector(el):el; return h?build(h):null; } };
+  };
 
-  function auto(){ var el=document.querySelector('.alchemist-bg'); if(!el){ el=document.createElement('div'); document.body.appendChild(el); } build(el); }
-  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', auto);
-  else auto();
-})();
+  })();
 
 </script>
 <script>
@@ -463,7 +459,7 @@ function tapRespond(q){
     } else if(/\bhello\b|\bhi\b|\bhey\b|good morning|good afternoon|good evening/i.test(ql)){
       tapBot("Hello! How can I help you today?");
     } else if(/what is|what'?s tap|alchemist path|about tap|this website|use of|purpose of/i.test(ql)){
-      tapBot("TAP is a transformation system by Andrew Porteous covering <strong>Financial Intelligence, Self-Development & Spiritual Awareness</strong>. Practical steps toward real freedom.");
+      tapBot("TAP is a transformation system by Andrew A. Porteous covering <strong>Financial Intelligence, Self-Development & Spiritual Awareness</strong>. Practical steps toward real freedom.");
     } else if(/find my level|my level|quiz|test|which level/i.test(ql)){
       tapBot("Take the free <strong>20-question quiz</strong> to find your level. <a href='lightbluealchemist_quiz.html'>Start here &rarr;</a>");
     } else if(/levels|stages|lead|iron|steel|copper|silver|gold|palladium|tin/i.test(ql)){
@@ -487,7 +483,7 @@ function tapRespond(q){
     } else if(/login|log in|sign in|account|register/i.test(ql)){
       tapBot("<a href='lightbluealchemist_login.html'>Log in &rarr;</a> or <a href='lightbluealchemist_register.html'>Create account &rarr;</a>");
     } else {
-      tapBot("This website is <strong>The Alchemist's Path</strong> — a step-by-step transformation system by Andrew Porteous covering Financial Intelligence, Self-Development, and Spiritual Awareness. You start with a free quiz to find your level, then progress through courses, eBooks, and community support.<br><br>Not sure where to begin? <a href='lightbluealchemist_quiz.html'>Take the free quiz &rarr;</a>");
+      tapBot("This website is <strong>The Alchemist's Path</strong> — a step-by-step transformation system by Andrew A. Porteous covering Financial Intelligence, Self-Development, and Spiritual Awareness. You start with a free quiz to find your level, then progress through courses, eBooks, and community support.<br><br>Not sure where to begin? <a href='lightbluealchemist_quiz.html'>Take the free quiz &rarr;</a>");
     }
   },600);
 }
