@@ -1,0 +1,16 @@
+The quickest path: replace the clashing light-theme CSS rules (lines 451, 491-499 in the stylesheet) 
+with dark-theme equivalents, and verify the module cards render correctly.
+
+Current state of the file after full read:
+- Navbar: dark blue rg​ba(7,9,26,.95) ✓
+- Module card CSS: exact live site #C8DCFF / #0D1B35 ✓  
+- Module render JS: ax-module-card structure ✓
+- Tab bar background: light gradient #f5f8ff → #edf2ff ✗ (needs dark)
+- Popup overlay: rgba(250,248,243,.96) ✗ (needs dark)
+- Popup box: #fff ✗ (needs dark)
+- Overall assessment wrapper: #07091A ✓
+
+Specific fix needed:
+.ax-tab-wrap background → dark
+.ax-popup-overlay background → dark  
+.ax-popup-box background → dark

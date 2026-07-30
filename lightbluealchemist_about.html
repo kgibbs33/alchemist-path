@@ -115,15 +115,15 @@ a:hover{opacity:.8;}
 .pillar-card{padding:2.5rem 2rem;border-radius:10px;border:1px solid rgba(255,215,0,.1);position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;}
 .pillar-card:hover{transform:translateY(-5px);border-color:rgba(255,215,0,.3);box-shadow:0 20px 50px rgba(0,0,0,.4);}
 .pillar-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-.pillar-card:nth-child(1){background:linear-gradient(145deg,rgba(46,83,57,.15),rgba(255,255,255,.9));}
+.pillar-card:nth-child(1){background:linear-gradient(145deg,rgba(46,83,57,.25),rgba(7,9,26,.95));}
 .pillar-card:nth-child(1)::before{background:var(--wealth);}
-.pillar-card:nth-child(2){background:linear-gradient(145deg,rgba(77,166,255,.1),rgba(255,255,255,.9));}
+.pillar-card:nth-child(2){background:linear-gradient(145deg,rgba(77,166,255,.2),rgba(7,9,26,.95));}
 .pillar-card:nth-child(2)::before{background:var(--self);}
-.pillar-card:nth-child(3){background:linear-gradient(145deg,rgba(232,116,59,.1),rgba(255,255,255,.9));}
+.pillar-card:nth-child(3){background:linear-gradient(145deg,rgba(232,116,59,.2),rgba(7,9,26,.95));}
 .pillar-card:nth-child(3)::before{background:var(--spirit);}
 .pillar-icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.5rem;}
 .pillar-title{font-size:1.05rem;margin-bottom:.6rem;}
-.pillar-body{font-size:.84rem;color:var(--muted);line-height:1.85;}
+.pillar-body{font-size:.84rem;color:#E8E4D8;line-height:1.85;}
 
 /* MISSION & GOALS */
 .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
@@ -424,8 +424,21 @@ a:hover{opacity:.8;}
     </div>
 
     <div class="legal-item" id="legal-imprint">
-      <button class="legal-toggle" onclick="toggleLegal('legal-imprint')">Legal Notice / Imprint</button>
-      <div class="legal-body">Content to be confirmed before publishing.</div>
+      <button class="legal-toggle" onclick="toggleLegal('legal-imprint')">Legal Notice / Impressum</button>
+      <div class="legal-body">
+        <p><strong>Legal Notice / Impressum</strong></p>
+        <p>Information in accordance with § 5 TMG (German Telemedia Act) and Regulation (EU) 2022/2065 (Digital Services Act):</p>
+        <p><strong>Operator:</strong> Andrew A. Porteous<br>
+        Rheurdt, Germany</p>
+        <p><strong>Contact:</strong> Via the contact form on this website or email to the address provided at the time of course registration.</p>
+        <p><strong>Responsible for content according to § 55 Abs. 2 RStV:</strong> Andrew A. Porteous (address as above)</p>
+        <p><strong>Disclaimer:</strong> The content of this website has been compiled with the greatest possible care. However, no guarantee can be given for the accuracy, completeness and timeliness of the content. As a service provider, we are responsible for our own content on these pages in accordance with general laws. However, we are not obligated to monitor transmitted or stored third-party information (§§ 8-10 TMG). Upon notification of violations, we will remove such content immediately.</p>
+        <p><strong>Liability for Links:</strong> Our website contains links to external websites of third parties. We have no influence on the content of these linked websites and cannot accept any liability for third-party content. The respective provider or operator of the linked pages is always responsible for the content of these pages. At the time of linking, the linked pages were checked for possible legal violations; no illegal content was identifiable at the time of linking. Permanent monitoring of the linked pages is not reasonable without concrete evidence of a violation. Upon notification of violations, we will remove such links immediately.</p>
+        <p><strong>Copyright:</strong> The content and works created by the operator on these pages are subject to copyright law. Reproduction, editing, distribution and any kind of use outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.</p>
+        <p><strong>Dispute Resolution:</strong> The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>. We are not obligated and generally unwilling to participate in dispute settlement proceedings before a consumer arbitration board.</p>
+        <p><strong>Applicable Law:</strong> This legal notice and all matters arising from the use of this website are governed by the laws of the Federal Republic of Germany, subject to any mandatory consumer protection provisions of the user's country of residence.</p>
+        <p><strong>VAT / Tax Identification:</strong> To be confirmed and inserted before publication if applicable under § 27a UStG.</p>
+      </div>
     </div>
 
     <div class="legal-item" id="legal-terms">

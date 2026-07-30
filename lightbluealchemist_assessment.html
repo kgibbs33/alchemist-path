@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Explore the 7 transformation levels of The Alchemist's Path - from Lead to Gold. Each level builds on the last with practical systems and clear milestones.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stage Assessment â€” The Alchemist's Path</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Great+Vibes&display=swap');
+html,body{background:#07091A!important;margin:0!important;padding:0!important;}
+.sy-page,.sy-lp-page,[class*="sy-section"],[class*="sy-row"],[id^="section-"]{padding-top:0!important;margin-top:0!important;}
+header,header *,.sy-lp-header,.website-header,.sy-header,.sy_header,header.sy,.sy-page-header,div[class*="header-wrapper"],div[class*="sy-header"],div[id*="header"],section[class*="header"]{display:none!important;height:0!important;min-height:0!important;overflow:hidden!important;padding:0!important;margin:0!important;}
+.sy-footer,.sy-lp-footer,.website-footer,.sy_footer,[class*="sy-footer"],[class*="systeme-footer"],[id*="sy-footer"]{display:none!important;height:0!important;min-height:0!important;overflow:hidden!important;padding:0!important;margin:0!important;}
+.tap-wrap{background:transparent;}
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   TOKENS
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+:root{
+  --bg:#07091A; --bg2:#090D25; --bg3:#0C1135;
+  --gold:#C8960A; --gold2:#A07800; --gold3:rgba(200,150,10,.12);
+  --text:#E8E4D8; --muted:#8896B0; --border:rgba(200,150,10,.35);
+  --tin:#9FA4A9; --lead:#5B5B5B; --iron:#43464B; --steel:#7E868C;
+  --copper:#B87333; --silver:#C0C0C0; --lgold:#FFD700; --palladium:#CEDCE6;
+  --wealth:#2E5339; --self:#4DA6FF; --spirit:#E8743B;
+  --font-head:'Cinzel',serif; --font-body:'Lato',sans-serif; --font-quote:'Great Vibes',cursive;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7;overflow-x:hidden;}
+h1,h2,h3,h4{font-family:var(--font-head);color:var(--gold);letter-spacing:.06em;}
+a{color:var(--gold);text-decoration:none;transition:opacity .2s;}
+a:hover{opacity:.8;}
+img{max-width:100%;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   ANIMATIONS
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+@keyframes rotate{to{transform:rotate(360deg);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes shimmer{0%{background-position:-200% center;}100%{background-position:200% center;}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 10px rgba(255,215,0,.2),0 0 30px rgba(255,215,0,.05);}50%{box-shadow:0 0 25px rgba(255,215,0,.5),0 0 60px rgba(255,215,0,.15);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@keyframes checkPop{0%{transform:scale(0);}70%{transform:scale(1.2);}100%{transform:scale(1);}}
+@keyframes unlockGlow{0%,100%{box-shadow:0 0 0 rgba(255,215,0,0);}50%{box-shadow:0 0 40px rgba(255,215,0,.35),0 0 80px rgba(255,215,0,.1);}}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   NAVBAR
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.nav{position:fixed;top:0;width:100vw;margin-left:calc(50% - 50vw);z-index:99999;display:flex;align-items:center;justify-content:space-between;height:90px;padding:0 40px;background:rgba(7,9,26,.95);border-bottom:1px solid rgba(200,150,10,.18);backdrop-filter:blur(12px);transition:background .3s;}
+.nav.scrolled{background:rgba(7,9,26,.98);}.nav::before{content:"";position:absolute;top:-300px;left:0;right:0;height:300px;background:#07091A;}
+.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;}
+.nav-logo-symbol{height:40px;width:auto;border-radius:4px;}
+.nav-logo-text{font-family:var(--font-head);font-size:.82rem;font-weight:700;color:#b8972a;letter-spacing:.08em;line-height:1.2;}
+.nav-logo-sub{font-family:var(--font-body);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:#E8E4D8;opacity:.7;}
+.nav-links{display:flex;align-items:center;gap:1.5rem;}
+.nav-links a{font-family:var(--font-body);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#E8E4D8;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:#b8972a;}
+.nav-login{font-family:var(--font-body);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#E8E4D8!important;border:1.5px solid rgba(44,44,62,.35);border-radius:3px;padding:6px 14px;transition:border-color .2s,color .2s;text-decoration:none;}
+.nav-login:hover{border-color:#b8972a;color:#b8972a!important;}
+.nav-cta{background:#b8972a;color:#ffffff!important;font-family:var(--font-head);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;border:none;cursor:pointer;transition:box-shadow .3s,transform .2s;}
+.nav-cta:hover{box-shadow:0 0 20px rgba(184,151,42,.4);transform:translateY(-1px);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:#b8972a;border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:90px;left:0;right:0;background:#faf8f3;border-bottom:2px solid #b8972a;padding:1.5rem 2rem;flex-direction:column;gap:1.25rem;z-index:999;}
+.mobile-menu a{font-family:var(--font-body);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:#E8E4D8;padding:.5rem 0;border-bottom:1px solid rgba(184,151,42,.15);}
+.mobile-menu.open{display:flex;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   BUTTONS
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.btn-primary{
+  background:linear-gradient(135deg,#FFD700 0%,#C8A400 50%,#FFD700 100%);
+  background-size:200% auto;
+  color:#0A0A0F;font-family:var(--font-head);font-weight:700;font-size:.75rem;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.95rem 2.5rem;border-radius:3px;border:none;cursor:pointer;
+  transition:background-position .4s,box-shadow .3s,transform .2s;
+  text-decoration:none;display:inline-block;
+}
+.btn-primary:hover{background-position:right center;box-shadow:0 0 30px rgba(255,215,0,.5);transform:translateY(-2px);color:#0A0A0F;}
+.btn-outline{background:#1B5FC7;color:#fff;font-family:var(--font-head);font-weight:700;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;padding:1rem 3rem;border-radius:3px;border:none;cursor:pointer;transition:box-shadow .3s,transform .2s;text-decoration:none;display:inline-block}
+.btn-outline:hover{background:#1852B0;box-shadow:0 0 20px rgba(27,95,199,.3);transform:translateY(-2px);color:#fff;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   SECTION UTILITY
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.section{padding:5rem 1.5rem;}
+.section-inner{max-width:1140px;margin:0 auto;}
+.section-label{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:.75rem;}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:1rem;line-height:1.2;}
+.section-sub{font-size:1rem;color:var(--muted);max-width:560px;line-height:1.8;margin-bottom:3rem;}
+.gold-line{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:1.25rem 0;}
+.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   PAGE HERO
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.page-hero{
+  padding:3rem 1.5rem 5rem;
+  text-align:center;
+  background:radial-gradient(ellipse at 50% 30%,rgba(255,215,0,.06) 0%,transparent 65%);
+  position:relative;
+  overflow:hidden;
+}
+.page-hero::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,215,0,.015) 80px,rgba(255,215,0,.015) 81px),
+             repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,215,0,.015) 80px,rgba(255,215,0,.015) 81px);
+  pointer-events:none;
+}
+.page-hero-eyebrow{font-family:var(--font-body);font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
+.page-hero h1{font-size:clamp(2rem,5vw,3.8rem);font-weight:900;line-height:1.1;margin-bottom:1rem;background:linear-gradient(135deg,#A07800 0%,#C8960A 50%,#7A5C00 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.page-hero-quote{font-family:var(--font-quote);font-size:1.6rem;color:#A07800!important;margin-bottom:1.5rem;}
+.page-hero p{font-size:.95rem;color:var(--muted);max-width:600px;margin:0 auto 2.5rem;line-height:1.9;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   LAYOUT: MAIN + STICKY SIDEBAR
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.levels-layout{
+  display:grid;
+  grid-template-columns:1fr 280px;
+  gap:2.5rem;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem 6rem;
+  align-items:start;
+}
+.levels-main{min-width:0;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   STICKY PROGRESS SIDEBAR
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.progress-sidebar{
+  position:sticky;
+  top:90px;
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:1.75rem 1.5rem;
+}
+.progress-sidebar h3{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;color:var(--gold);}
+.progress-bar-wrap{margin-bottom:1.5rem;}
+.progress-bar-label{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);margin-bottom:.5rem;}
+.progress-bar-track{height:6px;background:rgba(255,215,0,.1);border-radius:3px;overflow:hidden;}
+.progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold2),var(--gold));border-radius:3px;transition:width .5s ease;}
+.progress-steps{display:flex;flex-direction:column;gap:.6rem;}
+.progress-step{
+  display:flex;align-items:center;gap:.75rem;
+  padding:.6rem .75rem;border-radius:6px;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:background .2s,border-color .2s;
+}
+.progress-step:hover{background:rgba(255,215,0,.05);border-color:rgba(255,215,0,.1);}
+.progress-step.active{background:rgba(255,215,0,.07);border-color:rgba(255,215,0,.2);}
+.progress-step.completed .step-dot{border-color:var(--gold);}
+.progress-step.completed .step-dot::after{opacity:1;}
+.step-dot{
+  width:14px;height:14px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.15);
+  flex-shrink:0;position:relative;
+  transition:border-color .3s;
+}
+.step-dot::after{
+  content:'âœ“';position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:7px;font-weight:700;
+  opacity:0;transition:opacity .3s;
+}
+.step-name{font-family:var(--font-head);font-size:.68rem;letter-spacing:.05em;line-height:1.2;}
+.step-sub{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   LEVEL CARDS
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.level-card{
+  background:var(--bg3);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:2.5rem;
+  transition:box-shadow .4s,border-color .4s;
+  scroll-margin-top:90px;
+  position:relative;
+}
+.level-card:hover{border-color:rgba(255,215,0,.15);box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.level-card-top{
+  padding:2rem 2.5rem;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:start;
+  gap:1.5rem;
+  position:relative;
+}
+.level-number{
+  font-family:var(--font-head);
+  font-size:3.5rem;
+  font-weight:900;
+  line-height:1;
+  opacity:.12;
+  position:absolute;
+  right:1.5rem;
+  top:1.5rem;
+  color:var(--metal-color,#FFD700);
+  pointer-events:none;
+  user-select:none;
+}
+.level-glyph{
+  width:64px;height:64px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;
+  flex-shrink:0;
+  border:2px solid;
+  position:relative;
+}
+.level-glyph::after{
+  content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:1px solid;opacity:.2;
+}
+.level-info{min-width:0;}
+.level-meta{display:flex;align-items:center;gap:.75rem;margin-bottom:.5rem;flex-wrap:wrap;}
+.level-badge{
+  font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  padding:.25rem .75rem;border-radius:20px;
+  border:1px solid;opacity:.8;
+  font-family:var(--font-body);font-weight:700;
+}
+.level-keyword{
+  font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted);
+}
+.level-title{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:700;color:var(--metal-color,#FFD700);margin-bottom:.35rem;}
+.level-subtitle{font-size:.8rem;color:var(--muted);font-style:italic;}
+.level-cert{
+  flex-shrink:0;
+  width:64px;height:64px;
+  border-radius:50%;
+  border:2px solid;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  position:relative;
+  opacity:.6;
+}
+.level-cert::before{
+  content:'';position:absolute;inset:-4px;border-radius:50%;
+  border:1px dashed;opacity:.3;
+}
+.cert-icon{font-size:1.3rem;line-height:1;}
+.cert-text{font-family:var(--font-head);font-size:.38rem;letter-spacing:.08em;text-transform:uppercase;margin-top:1px;}
+
+.level-body{
+  padding:0 2.5rem 2rem;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+.level-description{
+  font-size:.9rem;color:var(--muted);line-height:1.9;
+  padding-top:.5rem;
+  border-top:1px solid rgba(255,255,255,.06);
+  grid-column:1/-1;
+}
+
+.level-modules h4,.level-assess h4{
+  font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);opacity:.75;
+  margin-bottom:1rem;
+}
+.module-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.module-list li{
+  display:flex;align-items:flex-start;gap:.65rem;
+  font-size:.83rem;color:var(--text);line-height:1.5;
+}
+.module-list li::before{
+  content:'â—†';
+  font-size:.45rem;
+  color:var(--metal-color,#FFD700);
+  flex-shrink:0;margin-top:.45rem;
+}
+
+/* Assessment checklist */
+.assess-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.assess-item{display:flex;align-items:flex-start;gap:.75rem;cursor:pointer;}
+.assess-check{
+  width:18px;height:18px;border-radius:3px;
+  border:2px solid rgba(255,255,255,.2);
+  flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:.2rem;
+  transition:background .2s,border-color .2s;
+  position:relative;
+}
+.assess-check.checked{border-color:var(--metal-color,#FFD700);background:var(--metal-color,#FFD700);}
+.assess-check.checked::after{
+  content:'âœ“';
+  color:#0A0A0F;font-size:.65rem;font-weight:900;
+  animation:checkPop .2s ease;
+}
+.assess-label{font-size:.8rem;color:var(--muted);line-height:1.5;user-select:none;}
+.assess-item.checked .assess-label{color:var(--text);}
+
+/* Level result banner */
+.level-result{
+  display:none;
+  margin:1rem 0 0;
+  padding:1rem 1.25rem;
+  border-radius:6px;
+  background:rgba(255,215,0,.07);
+  border:1px solid rgba(255,215,0,.25);
+  font-size:.82rem;
+  animation:unlockGlow 2s ease infinite;
+}
+.level-result.show{display:flex;align-items:center;gap:.75rem;}
+.level-result-icon{font-size:1.3rem;flex-shrink:0;}
+.level-result-text strong{font-family:var(--font-head);font-size:.85rem;color:var(--gold);display:block;margin-bottom:.15rem;}
+
+.level-footer{
+  padding:1.5rem 2.5rem;
+  background:rgba(0,0,0,.25);
+  border-top:1px solid rgba(255,255,255,.04);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+.enroll-btn{
+  font-family:var(--font-head);font-size:.72rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.8rem 2rem;border-radius:4px;border:none;cursor:pointer;
+  transition:box-shadow .3s,transform .2s,opacity .3s;
+  text-decoration:none;display:inline-block;
+}
+.level-progress-text{font-size:.75rem;color:var(--muted);}
+.level-progress-text span{color:var(--gold);font-weight:700;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   ASSESSMENT SELF-QUIZ INTRO BANNER
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.quiz-intro{
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:2rem 2.5rem;
+  margin-bottom:3rem;
+  display:flex;
+  align-items:flex-start;
+  gap:1.5rem;
+}
+.quiz-intro-icon{font-size:2rem;flex-shrink:0;animation:float 3s ease-in-out infinite;}
+.quiz-intro-body h3{font-size:1rem;margin-bottom:.4rem;color:var(--gold);}
+.quiz-intro-body p{font-size:.85rem;color:var(--muted);line-height:1.8;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   OVERALL RESULT SECTION
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.overall-result{
+  display:none;
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:3rem;
+  text-align:center;
+  margin:3rem 0;
+  animation:unlockGlow 3s ease infinite;
+}
+.overall-result.show{display:block;}
+.overall-result-symbol{font-size:3rem;margin-bottom:1rem;display:block;}
+.overall-result h2{font-size:1.6rem;margin-bottom:.75rem;}
+.overall-result p{color:var(--muted);margin-bottom:1.5rem;font-size:.9rem;}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   QUOTE BANNER
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.quote-banner{
+  padding:5rem 1.5rem;
+  text-align:center;
+  background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 50%,var(--bg) 100%);
+}
+.quote-banner blockquote{
+  font-family:var(--font-quote);
+  font-size:clamp(1.6rem,3vw,2.5rem);
+  color:var(--gold);
+  max-width:700px;margin:0 auto 1rem;
+  line-height:1.4;
+}
+.quote-banner cite{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   FOOTER
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.footer{
+  background:var(--bg3);
+  border-top:1px solid var(--border);
+  padding:4rem 1.5rem 2rem;
+}
+.footer-copy span{color:#C8960A!important;}
+.footer-grid{
+  max-width:1140px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;
+  margin-bottom:3rem;
+}
+.footer-brand-logo{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;}
+.footer-brand-logo svg{width:32px;height:32px;filter:drop-shadow(0 0 8px rgba(255,215,0,.3));}
+.footer-brand-name{font-family:var(--font-head);font-size:.9rem;font-weight:700;color:var(--gold);}
+.footer-tagline{font-family:var(--font-quote);font-size:1.1rem;color:#A07800;margin-bottom:.75rem;}
+.footer-desc{font-size:.8rem;color:var(--muted);line-height:1.8;max-width:280px;}
+.footer-col h4{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.25rem;color:var(--gold);}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col ul li a{font-size:.8rem;color:var(--muted);transition:color .2s;}
+.footer-col ul li a:hover{color:var(--gold);}
+.footer-bottom{max-width:1140px;margin:0 auto;padding-top:1.5rem;border-top:1px solid rgba(255,215,0,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:.72rem;color:var(--muted);}
+.footer-legal{display:flex;gap:1.5rem;}
+.footer-legal a{font-size:.72rem;color:var(--muted);}
+.footer-legal a:hover{color:var(--gold);}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   SCROLL REVEAL
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+@media(max-width:900px){
+  .levels-layout{grid-template-columns:1fr;}
+  .progress-sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+  .progress-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;grid-column:1/-1;}
+  .progress-bar-wrap{grid-column:1/-1;}
+}
+@media(max-width:768px){
+  .nav{padding:.9rem 1.25rem;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .level-body{grid-template-columns:1fr;}
+  .level-description{grid-column:1;}
+  .level-card-top{grid-template-columns:auto 1fr auto;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .progress-steps{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:480px){
+  .level-card-top{grid-template-columns:auto 1fr;gap:1rem;}
+  .level-cert{display:none;}
+  .level-number{font-size:2.5rem;}
+  .footer-grid{grid-template-columns:1fr;}
+  .progress-steps{grid-template-columns:1fr 1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .ax-begin-btn{width:100%;padding:16px 0;}
+}
+/* â”€â”€ 7 STAGES ASSESSMENT â”€â”€ */
+.ax-tab-wrap{background:linear-gradient(180deg,#0C1135 0%,#090D25 100%);border-bottom:2px solid rgba(200,150,10,.7);border-radius:0;}
+.ax-tab-bar{display:flex;max-width:1100px;margin:0 auto;overflow-x:auto;scrollbar-width:none;}
+.ax-tab-bar::-webkit-scrollbar{display:none;}
+.ax-tab{flex:1;min-width:110px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 8px 8px;cursor:pointer;border-bottom:2px solid transparent;background:none;border-left:none;border-right:none;border-top:none;transition:all .25s;position:relative;}
+.ax-tab:hover{background:rgba(200,150,10,.07);}
+.ax-tab.active{border-bottom-color:#C8960A;background:rgba(200,150,10,.08);}
+.ax-tab-icon{width:38px;height:38px;border-radius:50%;border:2px solid rgba(200,150,10,.55);display:flex;align-items:center;justify-content:center;font-size:1rem;background:rgba(200,150,10,.06);transition:all .3s;overflow:hidden;}
+.ax-tab:not(.active) .ax-tab-icon{opacity:.45;}
+.ax-tab.active .ax-tab-icon{border-color:#C8960A;border-width:2.5px;background:rgba(200,150,10,.15);box-shadow:0 0 18px rgba(200,150,10,.5);opacity:1;}
+.ax-tab-name{font-family:var(--font-head);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C8960A;}
+.ax-tab:not(.active) .ax-tab-name{opacity:.45;}
+.ax-tab-virtue{font-family:var(--font-head);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#8896B0;opacity:.7;}
+.ax-tab.active .ax-tab-virtue{opacity:1;color:#8896B0;}
+.ax-content{max-width:860px;margin:0 auto;padding:50px 100px 80px;}
+.ax-stage-heading{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(200,150,10,.2);text-align:center;}
+.ax-icon{width:72px;height:72px;border-radius:50%;border:2.5px solid #C8960A;display:flex;align-items:center;justify-content:center;font-size:1.9rem;background:rgba(200,150,10,.06);box-shadow:0 0 24px rgba(200,150,10,.3);flex-shrink:0;overflow:hidden;}
+.ax-stage-label{font-family:var(--font-head);font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:#C8960A;opacity:.65;margin-bottom:8px;}
+.ax-stage-title{font-family:var(--font-head);font-size:clamp(1.2rem,3vw,1.9rem);color:#C8960A;font-weight:900;margin-bottom:8px;line-height:1.25;}
+.ax-tagline{font-style:italic;font-size:1.05rem;color:#8896B0;line-height:1.6;}
+.ax-level-quote{margin:1.5rem 0;padding:1.25rem 1.5rem;border-left:3px solid var(--gold);background:rgba(200,150,10,.05);border-radius:0 8px 8px 0;}
+.ax-level-quote blockquote{font-family:var(--font-quote);font-size:1.3rem;color:var(--gold);line-height:1.4;margin-bottom:.5rem;}
+.ax-level-quote cite{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);}
+.ax-level-wording{font-family:var(--font-quote);font-size:1.15rem;color:var(--gold2);text-align:center;margin:1.25rem 0;line-height:1.5;}
+.ax-choices{display:flex;flex-direction:column;gap:.65rem;margin-top:.75rem;}
+.ax-choice{display:flex;align-items:flex-start;gap:.75rem;padding:.85rem 1rem;background:rgba(200,150,10,.05);border:1px solid rgba(200,150,10,.2);border-radius:6px;font-size:.88rem;color:var(--text);line-height:1.6;}
+
+.ax-mod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;align-items:stretch;}
+.ax-mod-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;align-items:stretch;}
+.ax-mod-grid-3 .ax-mod-card{min-height:160px;padding:24px 18px;}
+.ax-mod-card{background:#0C1135;border:1.5px solid rgba(200,150,10,.25);border-radius:10px;padding:16px 12px 14px;cursor:pointer;transition:all .25s;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:space-between;min-height:110px;}
+.ax-mod-card:hover{border-color:#C8960A;background:#0E1440;transform:translateY(-2px);box-shadow:0 4px 14px rgba(200,150,10,.15);}
+.ax-mod-num{font-family:var(--font-head);font-size:.85rem;letter-spacing:.2em;color:var(--gold);opacity:1;font-weight:900;}
+.ax-mod-title{font-family:var(--font-head);font-size:.88rem;font-weight:700;color:#E8E4D8;line-height:1.35;flex:1;display:flex;align-items:center;justify-content:center;padding:4px 0;}
+.ax-mod-soon{font-family:var(--font-head);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);opacity:.65;}
+@media(max-width:768px){.ax-mod-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.ax-mod-grid{grid-template-columns:repeat(2,1fr);}.ax-wrap{padding:24px 14px 40px;}}
+.ax-choice-num{font-family:var(--font-head);font-size:.7rem;color:var(--gold);font-weight:700;min-width:18px;margin-top:2px;}
+.ax-mod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;align-items:stretch;}
+.ax-mod-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;align-items:stretch;}
+.ax-mod-card{background:#0C1135;border:1.5px solid rgba(200,150,10,.25);border-radius:10px;padding:16px 12px 14px;cursor:pointer;transition:all .25s;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:space-between;min-height:110px;}
+.ax-mod-card:hover{border-color:#C8960A;background:#0E1440;transform:translateY(-2px);box-shadow:0 4px 14px rgba(200,150,10,.15);}
+.ax-mod-num{font-family:var(--font-head);font-size:.85rem;letter-spacing:.2em;color:var(--gold);opacity:1;font-weight:900;}
+.ax-mod-title{font-family:var(--font-head);font-size:.88rem;font-weight:700;color:#E8E4D8;line-height:1.35;flex:1;display:flex;align-items:center;justify-content:center;padding:4px 0;}
+.ax-mod-soon{font-family:var(--font-head);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);opacity:.65;}
+@media(max-width:768px){.ax-mod-grid{grid-template-columns:repeat(2,1fr);}}
+.ax-sec-label{font-family:var(--font-head);font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:#C8960A;opacity:1;font-weight:900;margin-bottom:14px;margin-top:34px;}
+.ax-teaching{font-size:1.05rem;line-height:1.9;color:#E8E4D8;}
+.ax-divider{border:none;border-top:1px solid rgba(200,150,10,.2);margin:32px 0;}
+.ax-modules-btn{font-family:var(--font-head);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#C8960A;background:transparent;border:1px solid rgba(200,150,10,.45);padding:15px 0;cursor:pointer;border-radius:3px;width:100%;transition:all .2s;}
+.ax-modules-btn:hover{background:rgba(200,150,10,.05);box-shadow:0 0 16px rgba(200,150,10,.15);}
+.ax-begin-btn{font-family:var(--font-head);font-size:.85rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0A0A0F;background:linear-gradient(135deg,#FFD700 0%,#C8A400 50%,#FFD700 100%);background-size:200% auto;border:none;padding:20px 72px;cursor:pointer;border-radius:3px;display:inline-block;transition:background-position .4s,box-shadow .3s,transform .2s;box-shadow:0 4px 20px rgba(200,150,10,.25);}
+.ax-begin-btn:hover{background-position:right center;box-shadow:0 0 30px rgba(255,215,0,.5);transform:translateY(-2px);}
+.ax-popup-overlay{display:none;position:fixed;inset:0;z-index:99999;background:rgba(7,9,26,.96);backdrop-filter:blur(10px);align-items:center;justify-content:center;}
+.ax-popup-overlay.show{display:flex;}
+.ax-popup-box{text-align:center;padding:50px 32px;max-width:500px;width:100%;background:#090D25;border:1px solid rgba(200,150,10,.35);border-radius:12px;box-shadow:0 20px 60px rgba(200,150,10,.12);}
+.ax-popup-emoji{font-size:3.5rem;margin-bottom:24px;display:block;}
+.ax-popup-title{font-family:var(--font-head);font-size:clamp(1.2rem,3.5vw,1.8rem);color:#C8960A;font-weight:900;margin-bottom:16px;}
+.ax-popup-label{font-family:var(--font-head);font-size:.58rem;letter-spacing:.35em;text-transform:uppercase;color:#8896B0;margin-bottom:18px;}
+.ax-popup-text{font-style:italic;font-size:1rem;color:#8896B0;line-height:1.75;margin-bottom:36px;}
+.ax-popup-close{font-family:var(--font-head);font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0A0A0F;background:linear-gradient(135deg,#FFD700 0%,#C8A400 50%,#FFD700 100%);background-size:200% auto;border:none;padding:13px 40px;cursor:pointer;border-radius:3px;transition:background-position .4s,box-shadow .3s;}
+.ax-popup-close:hover{background-position:right center;box-shadow:0 0 20px rgba(255,215,0,.4);}
+@media(max-width:580px){.ax-content{padding:28px 16px 60px;}.ax-tab{min-width:86px;}.ax-tab-icon{width:34px;height:34px;font-size:1rem;}.ax-stage-heading{flex-direction:column;gap:14px;}.ax-icon{width:56px;height:56px;font-size:1.5rem;}}
+</style>
+
+</head>
+<body>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     NAVBAR
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<nav class="nav" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="data:image/jpeg;base64,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" alt="The Alchemist's Path" class="nav-logo-symbol">
+    <div>
+      <div class="nav-logo-text">The Alchemists Path</div>
+      <div class="nav-logo-sub">by Andrew A. Porteous</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="lightbluealchemist_levels.html">Levels</a>
+    <a href="lightbluealchemist_courses.html">Courses</a>
+    <a href="lightbluealchemist_videos.html">Videos</a>
+    <a href="lightbluealchemist_articles.html">Articles</a>
+    <a href="lightbluealchemist_glossary.html">Glossary</a>
+    <a href="lightbluealchemist_about.html">About</a>
+    <a href="lightbluealchemist_login.html" class="nav-login">Login</a>
+    <a href="lightbluealchemist_quiz.html" class="nav-cta">Begin Journey</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="lightbluealchemist_levels.html">Levels</a>
+  <a href="lightbluealchemist_courses.html">Courses</a>
+  <a href="lightbluealchemist_videos.html">Videos</a>
+  <a href="lightbluealchemist_articles.html">Articles</a>
+  <a href="lightbluealchemist_glossary.html">Glossary</a>
+  <a href="lightbluealchemist_about.html">About</a>
+  <a href="lightbluealchemist_login.html">Login</a>
+  <a href="lightbluealchemist_quiz.html" class="nav-cta" style="text-align:center;margin-top:.5rem;">Begin Journey</a>
+</div>
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     7 STAGES ASSESSMENT
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section style="padding-top:130px;padding-bottom:60px;margin:0;">
+  <div id="assessApp" style="background:#07091A;border-radius:10px;box-shadow:0 4px 32px rgba(10,22,40,.12);max-width:1100px;margin:0 auto 40px;overflow:hidden;">
+    <div class="ax-tab-wrap">
+      <div class="ax-tab-bar" id="axTabBar"></div>
+    </div>
+    <div class="ax-content" id="axWrap"></div>
+  </div>
+</section>
+
+<!-- COMING SOON POPUP -->
+<div class="ax-popup-overlay" id="axComingSoonPopup">
+  <div class="ax-popup-box">
+    <div class="ax-popup-title">Coming Soon</div>
+    <div class="ax-popup-label">Course Module</div>
+    <p class="ax-popup-text">This module is currently being developed by Andrew A. Porteous and will be available soon. Check back for updates on your learning journey.</p>
+    <button class="ax-popup-close" onclick="axClosePopup('axComingSoonPopup')">Close</button>
+  </div>
+</div>
+
+<!-- NOT READY POPUP -->
+<div class="ax-popup-overlay" id="axNotReadyPopup">
+  <div class="ax-popup-box">
+    <div class="ax-popup-title">Complete Your Modules First</div>
+    <div class="ax-popup-label">Stage Assessment</div>
+    <p class="ax-popup-text">Please complete all course modules for this stage before taking the assessment. The path of the alchemist requires patience and preparation.</p>
+    <button class="ax-popup-close" onclick="axClosePopup('axNotReadyPopup')">Close</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-bottom" style="flex-direction:column;gap:1.25rem;text-align:center;">
+      <p class="footer-copy">© 2025 <span style="color:#C8960A!important;">The Alchemist's Path</span> · Andrew A. Porteous</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   7 STAGES ASSESSMENT
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+const AX_STAGES=[
+  {id:'lead',icon:'<img alt="" src=\"data:image/jpeg;base64,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\" style=\"width:100%;height:100%;object-fit:cover;object-position:center center;\">',name:'Lead',virtue:'Awareness',num:'Stage 1 of 7',tagline:'"I know my financial situation could be better."',moduleLabel:'Module',teaching:'Lead is heavy, but it is also the first real step. At Lead you awaken: you recognize that your situation could improve, that you could budget, that saving and earning more are possible. You may not yet have discipline, but awareness has entered. This is the raw material of transformation.',modules:['Assessment, Analysis, Needs and Blocks','Your Why','Awareness','Focus and Habits','Gratefulness','Being Proactive vs Reactive','Just Do It','Get Control','The Magic of Saying Yes','How We Learn','Understand Yourself','Assessment: Analysis and Reflection']},
+  {id:'iron',icon:'<img alt="" src=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAkGBwgHBgkICAgKCgkLDhcPDg0NDhwUFREXIh4jIyEeICAlKjUtJScyKCAgLj8vMjc5PDw8JC1CRkE6RjU7PDn/2wBDAQoKCg4MDhsPDxs5JiAmOTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTn/wAARCABkAGQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDw2iiigAooratNBkKebes0OGIaDaRLwR1yMLnn1OR0xigDFqa2tLm7ZltreWdkXcwjQsQuQMnHbJH510yW1ooxFZQopVQdw3kkDG7LZwTyTjAyegGALEzyucu7tnnJNWqcmTzI5dNJ1J3CJp92zE4CiFiT+lU67Lyn+UksM9OaSRHddkiiRQchXAYZ9cGj2cgUkcdRXW3OkWdzEC0K28zOzGSEHuR1QnbgYOAu373cAAc9d6ZeWkbSywP5CsE85QSmTnAz2JCsQDzgGpaaKKdFFFIAooooAKKK3NAsV4vJwCDkRqQc5GPm9PUDryD0wKcU27ITdlcvaVp1tawI8irLdNtkEnzDyuD8oHAzyMkjqox0y1wA555+tMbCnipYZzESyhSSCPmGa6401FeZg5tsURZXIAGD1pxSNfvuMVFGWkljjU8uwFenaDo3huysVe8hFxcH7zyjPPsKmb5UXHU84JjAXDgjsKkSNWTeXAX9a9H1O20ZofMihhjHQDywM1wurGw8xkgVUkB4KdD9RUqVx2tqUHeMMOvNEyw3MbwsA8TDDAjrVSeVdyiPJx1zTVcjkGr9ndE89jndX0x9PlypLwMfkf8Aoff+dZ9dlKfPgeFxlHGDXJ3kBtbmSFjnYeD6jsfyrnnBxZpGSkQ0UUVBQ+KNppUiQZd2CqM45NddFAIbeNFPCKBwMZ98VzWkBW1GDcu4Ak49wDj9a6iZiBgV0Yda3Mqr0sRk5PNPfbx5ZJGOc+tVy9J5hHSulrqc6JFkKOrDgqc1ow65LGh2zsCfWut8I+FNMeGO71WTzpW58rOFX6+tdHqmjaCItvlQoD0GAK5Ks03Y6IRaPJrrV5LggyTMfxqJb2FI+E3P1B967a+0TRlJMcY49Ky3srOEFtige/NTHcpnM26NJj5uSeSasTQrCG3SAt/CFq3fwW3lNPbKY3XqgPykeorI8zPvXVB3MJaEysRWdr1uZYFuVVi0fDkAkBSeCfTk4/4FVzOaW4WGSwuFmRyPLZhsbByASvY8ZAyO49OtFWN4MKbtI5SiiiuE6jT8P7ftzbiv3DjIGScjp7/T3rfkwx5bFczpDKmowlm2jJGcdyCAPzropWroodTGqFzFChXZOHyuTx0NVicdDQxrV0Lw7fa02YE2QjrIw4/Ctm+VasyWuxPa69cxx/IwPGCDTzr92Qd7lt3c8mtlvAAUBFmkaTH3ugrOuvA19CCRdD8TXJKzZ0q9tSk+tOUwASfftVKa9kmYlyTmn3GgX0Bw0mfpUI0q5B+ZjQgYkt4/keVuwOgAqvEFOMnFX00RmUtvKt781UurSazcLKvB+6w5BropsxmiRo4wpKygn0xUdwP9CuOf+WbfypinkUty8aWM7SbtvlsPlGTkjA/DJFaTdou5ENzl6KKK4DrHRu0UiSIcMhDA4zyK6iNxPbxyLj5lzwc49q5WtjRLzkWshABOYySev93+v5+taU58rJnHmRf28gE9673TddaxtoreB440RQAMdTXEzW7jJ6UwTui7Wbp3rSpLmREI8p6PceMLuUCJFRCPvsRjI9qoza/AXKFj5nqDkVxBvHYf60fnUZmY/wAQrGxZ181/Cw3FlwOuTWbLqcTO20beOD2rA3serfrQSO5/WncDQbUblsjdhfYU2W5a4tZI5TkDlfY1RMoA/wBYMUwzBhtXv1NXF6ky2JIkzzVLXJ/LgW3BYM+GbBwNo7Ed+f5VeWZIYnkc4CjJrnLuc3NzJMRjccgeg7D8qqrPSyFCFtSGiiiuc1CiiigDodP1dJoo7eXKygY3HkN6c+p/z1xUk67utc1Wha6pJH8s+ZVz94n5v/r1pCSW5Eo32Lpi9qDET3IqaK6trggJIAxwNp4OT29/wqZovetk4sztJFPyfc/nR5PuateV70jIEUs7AKOpPQUWihe8V1h56VIESFC7kKo6k1DPqFtCMIfNfOCF4H5/4ZrMu76a6OGOyP5f3aE7cgYzgnryfzPbis5TXQ0jF9Qvbtrl8AbYx0X+pqtRRWJoFFFFABRRRQAUUUUAFPjmliz5cjpnrtYjNFFADvtM/wDz3l/77NRkkkkkknqTRRQAlFFFABRRRQAUUUUAf//Z\" style=\"width:100%;height:100%;object-fit:cover;object-position:center center;\">',name:'Iron',virtue:'Stability',num:'Stage 2 of 7',tagline:'"My job pays the bills. We are stable, but if anything happenedâ€¦"',moduleLabel:'Module',teaching:'Iron is strong yet brittle. Here, life feels stable &mdash; the bills are paid, savings exist, holidays are possible. But stability is fragile; one job loss or sudden event could shake it. Iron is about strengthening the foundations.',modules:['Module 1','Module 2','Module 3','Module 4','Module 5','Module 6','Module 7','Module 8','Module 9','Module 10','Module 11','Module 12']},
+  {id:'steel',icon:'<img alt="" src=\"data:image/jpeg;base64,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\" style=\"width:100%;height:100%;object-fit:cover;object-position:center center;\">',name:'Steel',virtue:'Security',num:'Stage 3 of 7',tagline:'"We are secure. We have reserves and investments. The future feels safer."',moduleLabel:'Module',teaching:'Steel is forged from Iron &mdash; stability hardened into resilience. At Steel, you\'ve built reserves, investments, and a safety net. Even if you lost your job, you could survive for a year. This is not yet freedom, but it is true security.',modules:['Module 1','Module 2','Module 3','Module 4','Module 5','Module 6','Module 7','Module 8','Module 9','Module 10','Module 11','Module 12']},
+  {id:'copper',icon:'<img alt="" src=\"data:image/jpeg;base64,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\" style=\"width:100%;height:100%;object-fit:cover;object-position:center center;\">',name:'Copper',virtue:'Comfort',num:'Stage 4 of 7',tagline:'"Life is good. We have nice things, savings, and freedom from worry."',moduleLabel:'Module',teaching:'Copper is warm, flexible, and conductive. At this level, you\'ve nearly paid off your mortgage, own cars outright, and can enjoy holidays without stress. You live in comfort &mdash; a secure, abundant lifestyle, though still connected to work.',modules:['Module 1','Module 2','Module 3','Module 4','Module 5','Module 6','Module 7','Module 8','Module 9','Module 10','Module 11','Module 12']},
+  {id:'silver',icon:'<img alt="" src=\"data:image/jpeg;base64,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\" style=\"width:100%;height:100%;object-fit:cover;object-position:center center;\">',name:'Silver',virtue:'Independence',num:'Stage 5 of 7',tagline:'"My passive income covers my living expenses. I no longer need to work."',moduleLabel:'Module',teaching:'Silver is radiant, rare, and valuable &mdash; the first level of true independence. At this stage, your passive income matches or exceeds your monthly expenses. You no longer have to work. You may still choose to, but life is not dictated by employment.',quote:{text:'Perfect speed my son is being there, any number is a limit.',author:'Jonathan Livingston Seagull'},modules:['Module 1','Module 2','Module 3','Module 4','Module 5','Module 6','Module 7','Module 8','Module 9','Module 10','Module 11','Module 12']},
+  {id:'gold',icon:'<img alt="" src=\"data:image/jpeg;base64,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\" style=\"width:100%;height:100%;object-fit:cover;object-position:center center;\">',name:'Gold',virtue:'Freedom',num:'Stage 6 of 7',tagline:'"My wealth supports my being. Money is no longer my concern."',moduleLabel:'Module',teaching:'Gold is incorruptible, luminous, eternal. At this stage, you no longer worry about money at all. Your passive income is abundant, your assets are diversified, and your focus shifts away from wealth itself toward higher purpose, lifestyle design, and contribution.',quote:{text:'Work on Mastery. Remember that through the practice of wealth fulfilment, the benefits are in the Journey. Be the Destination.',author:'An Alchemist'},modules:['Module 1','Module 2','Module 3','Module 4','Module 5','Module 6','Module 7','Module 8','Module 9','Module 10','Module 11','Module 12']},
+  {id:'palladium',icon:'<img alt="" src=\"data:image/jpeg;base64,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\" style=\"width:100%;height:100%;object-fit:cover;object-position:center center;\">',name:'Palladium',virtue:'Mastery',num:'Stage 7 of 7',tagline:'"I serve, I teach, I empower others. This is the path of the Master."',moduleLabel:'Area',teaching:'Palladium is rare, radiant, and enduring &mdash; the symbol of Mastery. At this stage, wealth and freedom are no longer the focus; service, contribution, and teaching become the heart of the path. A Master refines their own abilities by guiding others, holding space, and expanding awareness in the community.\n\nThe Voluntary Path: Palladium is not an eighth level but a voluntary step into service. It cannot be forced; it can only be chosen.',wording:'In Mastery, you share your transformation with the world.',choices:['Support others on The Alchemist Path (Coach)','Expand with Alchemist Network (Grow your wealth)','Partner in spiritual retreats and transformational experiences (Spiritual Expansion)'],modules:['Area 1','Area 2','Area 3']}
+];
+var axActive=null;
+function axBuildTabs(){
+  var b=document.getElementById('axTabBar');
+  if(!b||b.hasChildNodes())return;
+  AX_STAGES.forEach(function(s){
+    var t=document.createElement('button');
+    t.className='ax-tab';t.id='axtab_'+s.id;
+    t.innerHTML='<div class="ax-tab-icon">'+s.icon+'</div><span class="ax-tab-name">'+s.name+'</span><span class="ax-tab-virtue">'+s.virtue+'</span>';
+    t.onclick=function(){axSwitchTo(s.id);};
+    document.getElementById('axTabBar').appendChild(t);
+  });
+}
+function axSwitchTo(id){
+  axActive=AX_STAGES.find(function(s){return s.id===id;});
+  document.querySelectorAll('.ax-tab').forEach(function(t){t.classList.remove('active');});
+  var at=document.getElementById('axtab_'+id);
+  if(at){at.classList.add('active');at.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});}
+  axRenderContent();
+}
+function axRenderContent(){
+  var s=axActive;
+  var cardsHTML=s.modules.map(function(t,i){
+    return '<div class="ax-mod-card" onclick="axShowPopup()">'+
+      '<span class="ax-mod-num">'+String(i+1).padStart(2,'0')+'</span>'+
+      '<span class="ax-mod-title">'+t+'</span>'+
+      '<span class="ax-mod-soon">Coming Soon</span>'+
+    '</div>';
+  }).join('');
+  document.getElementById('axWrap').innerHTML=
+    '<div class="ax-stage-heading"><div class="ax-stage-label">'+s.num+'</div><div class="ax-stage-title">'+s.name+' &mdash; '+s.virtue+'</div><div class="ax-tagline">'+s.tagline+'</div></div>'+
+    '<div class="ax-sec-label">Course '+s.moduleLabel+'s</div>'+
+    '<div class="'+(s.id==='palladium'?'ax-mod-grid-3':'ax-mod-grid')+'">'+cardsHTML+'</div>'+
+    '<hr class="ax-divider">'+
+    '<div style="text-align:center;"><button class="ax-begin-btn" onclick="axShowNotReady()">Begin Assessment &rarr;</button></div>';
+}function axShowPopup(id){
+  document.getElementById(id).classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function axShowPopup(){
+  document.getElementById('axComingSoonPopup').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function axClosePopup(){
+  document.getElementById('axComingSoonPopup').classList.remove('show');
+  document.body.style.overflow='';
+}
+function axShowNotReady(){
+  document.getElementById('axNotReadyPopup').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function axCloseNotReady(){
+  document.getElementById('axNotReadyPopup').classList.remove('show');
+  document.body.style.overflow='';
+}
+document.getElementById('axComingSoonPopup').addEventListener('click',function(e){if(e.target===this)axClosePopup();});
+document.getElementById('axNotReadyPopup').addEventListener('click',function(e){if(e.target===this)axCloseNotReady();});
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   OLD LEVEL DATA (unused &mdash; kept for reference)
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+const LEVELS = [
+  {
+    id: 'tin',
+    number: '01',
+    metal: 'Tin',
+    keyword: 'Awareness',
+    glyph: 'â™ƒ',
+    symbol: 'ðŸª¨',
+    color: '#9FA4A9',
+    colorRgb: '159,164,169',
+    bg: 'rgba(159,164,169,.06)',
+    pillar: 'Foundation',
+    description: 'Tin represents the very first awakening &mdash; the moment you realise that your current financial and personal reality is not fixed. You begin to sense that there is a pattern beneath your struggles, that money is not random, and that change is possible. This stage is about breaking the spell of unconscious living.',
+    modules: [
+      'Understanding your money story and inherited beliefs',
+      'The Alchemical Map: An overview of all 7 levels',
+      'Breaking the cycle of reactive spending',
+      'Introduction to the Three Pillars framework',
+      'Your first wealth audit &mdash; where you truly stand'
+    ],
+    criteria: [
+      'I realise my relationship with money was shaped by my upbringing',
+      'I have begun to question beliefs I used to take for granted',
+      'I can see patterns in my financial behaviour I never noticed before',
+      'I feel a genuine desire to understand myself more deeply',
+      'I have started tracking my income and expenses',
+      'I no longer blame external circumstances for my financial state',
+      'I feel willing to be honest about where I actually am right now',
+      'I have read at least one book on personal finance or mindset',
+      'I understand the difference between an asset and a liability',
+      'I feel cautiously optimistic that my situation can improve'
+    ]
+  },
+  {
+    id: 'lead',
+    number: '02',
+    metal: 'Lead',
+    keyword: 'Clarity',
+    glyph: 'â™„',
+    symbol: 'âš–ï¸',
+    color: '#8A8FA0',
+    colorRgb: '138,143,160',
+    bg: 'rgba(138,143,160,.06)',
+    pillar: 'Foundation',
+    description: 'Lead is the densest metal &mdash; it represents the full weight of reality as you face it without illusion. At this stage you conduct a ruthless, compassionate audit of your life: your finances, your habits, your relationships, and your time. It is uncomfortable, but it is the necessary foundation from which true transformation is forged.',
+    modules: [
+      'Conducting your complete life audit (financial + personal)',
+      'The psychology of avoidance and financial denial',
+      'Mapping your energy leaks: time, money, and attention',
+      'Core values excavation &mdash; what you actually want vs what you were told to want',
+      'Establishing your baseline: net worth, income streams, and liabilities'
+    ],
+    criteria: [
+      'I have written out my full financial picture &mdash; assets, debts, income, expenses',
+      'I know exactly how much money comes in and goes out each month',
+      'I have identified at least three habitual behaviours that undermine my goals',
+      'I have had an honest conversation with myself about what I truly value',
+      'I understand how I typically avoid financial discomfort',
+      'I have calculated my real hourly rate after all expenses',
+      'I no longer hide from bank statements or invoices',
+      'I know my net worth figure, even if it is negative',
+      'I have identified my three biggest financial liabilities',
+      'I feel grounded even when confronting uncomfortable financial truths'
+    ]
+  },
+  {
+    id: 'iron',
+    number: '03',
+    metal: 'Iron',
+    keyword: 'Discipline',
+    glyph: 'â™‚',
+    symbol: 'ðŸ”¥',
+    color: '#7A9080',
+    colorRgb: '122,144,128',
+    bg: 'rgba(46,83,57,.1)',
+    pillar: 'Financial',
+    description: 'Iron is the metal of the warrior &mdash; it requires you to forge a new structure for your life through consistent, disciplined action. This is where you build the habits, systems, and boundaries that will sustain every level above. Many people reach Lead and turn back. Those who forge Iron discover their true capacity.',
+    modules: [
+      'Building a bulletproof budget that you will actually follow',
+      'The 90-day discipline protocol: one habit at a time',
+      'Eliminating debt strategically &mdash; avalanche vs snowball methods',
+      'Creating your first emergency fund and financial safety net',
+      'Time-blocking and energy management for high performance'
+    ],
+    criteria: [
+      'I follow a written monthly budget consistently',
+      'I have an emergency fund covering at least one month of expenses',
+      'I am actively paying down debt using a clear strategy',
+      'I wake up at a consistent time each day and follow a morning routine',
+      'I regularly say no to short-term pleasures in service of long-term goals',
+      'I have eliminated at least one significant financial drain from my life',
+      'I track my progress weekly, not just when I feel motivated',
+      'I have automated at least one savings or debt repayment',
+      'My spending in the last 30 days reflects my stated values',
+      'I feel mentally stronger and more in control than 6 months ago'
+    ]
+  },
+  {
+    id: 'steel',
+    number: '04',
+    metal: 'Steel',
+    keyword: 'Strategy',
+    glyph: 'âš™',
+    symbol: 'ðŸ—¡ï¸',
+    color: '#7E868C',
+    colorRgb: '126,134,140',
+    bg: 'rgba(126,134,140,.06)',
+    pillar: 'Financial',
+    description: 'Steel is Iron refined &mdash; it represents the moment your discipline becomes intelligent strategy. You stop working hard at the wrong things and begin designing your life with precision. At this stage you build multiple income streams, study investment fundamentals, and begin thinking like a wealth architect rather than a wage earner.',
+    modules: [
+      'Income architecture: mapping your primary and secondary streams',
+      'Introduction to investing: index funds, property, and business',
+      'The Wealth Pyramid &mdash; building on a solid base',
+      'Tax strategy and legal structures for wealth protection',
+      'Negotiation and salary maximisation'
+    ],
+    criteria: [
+      'I have more than one source of income, even if one is small',
+      'I invest a percentage of my income every month without fail',
+      'I understand the difference between passive and active income',
+      'I have a written 3-year financial plan',
+      'I understand the basics of how compound interest works in my favour',
+      'I have studied at least one investment vehicle in depth',
+      'I no longer trade time for money as my only strategy',
+      'I review and adjust my financial strategy at least quarterly',
+      'I have had a conversation with a financial advisor or mentor',
+      'I think in decades, not just months, when making money decisions'
+    ]
+  },
+  {
+    id: 'copper',
+    number: '05',
+    metal: 'Copper',
+    keyword: 'Conductivity',
+    glyph: 'â™€',
+    symbol: 'ðŸŒ±',
+    color: '#B87333',
+    colorRgb: '184,115,51',
+    bg: 'rgba(184,115,51,.08)',
+    pillar: 'Self',
+    description: 'Copper is the metal of Venus &mdash; of connection, creativity, and flow. At this level you discover that wealth is not only financial; it lives in your relationships, your health, your creativity, and your contribution to others. You begin to generate value not just for yourself but as a conductor who amplifies the people around you.',
+    modules: [
+      'The three forms of capital: financial, social, and creative',
+      'Building a mastermind and high-value network',
+      'Health as wealth: energy optimisation and longevity',
+      'Creative income: monetising your knowledge and gifts',
+      'Contribution and the abundance mindset shift'
+    ],
+    criteria: [
+      'I have a network of genuinely supportive, growth-oriented people around me',
+      'I invest in my health as seriously as I invest in my finances',
+      'I have identified a skill or knowledge area I could teach others',
+      'I feel that my work creates genuine value for other people',
+      'I regularly give in some form &mdash; time, money, or knowledge',
+      'I have let go of at least one relationship that was keeping me small',
+      'I experience more moments of creative flow than I did two years ago',
+      'I see opportunities where others see obstacles',
+      'I feel energised by helping others succeed',
+      'My physical vitality supports my ambitions rather than limiting them'
+    ]
+  },
+  {
+    id: 'silver',
+    number: '06',
+    metal: 'Silver',
+    keyword: 'Reflection',
+    glyph: 'â˜½',
+    symbol: 'ðŸŒŠ',
+    color: '#C0C0C0',
+    colorRgb: '192,192,192',
+    bg: 'rgba(192,192,192,.05)',
+    pillar: 'Self',
+    description: 'Silver is the metal of the Moon &mdash; of reflection, intuition, and deep self-knowledge. At this stage you move from doing to being. You develop an inner life that guides your outer decisions. You learn to trust your intuition, to rest without guilt, and to lead from a place of authentic presence rather than performance.',
+    modules: [
+      'Developing your intuitive intelligence alongside analytical thinking',
+      'Emotional mastery: transforming reactive patterns',
+      'The practice of stillness: meditation, reflection, and journalling',
+      'Shadow work and the unconscious drivers of your choices',
+      'Leading with authenticity &mdash; your personal brand and legacy'
+    ],
+    criteria: [
+      'I have a consistent contemplative practice (meditation, journalling, or prayer)',
+      'I can identify my emotional triggers and respond rather than react',
+      'I regularly seek honest feedback about my blind spots',
+      'I feel increasingly at peace with uncertainty',
+      'I make important decisions from a centred, unhurried place',
+      'I have done meaningful work on my psychological patterns',
+      'I no longer need external validation to feel confident in my choices',
+      'I experience genuine moments of stillness and inner quiet',
+      'I am honest with myself even when the truth is uncomfortable',
+      'I feel a growing sense of who I truly am beneath my roles and titles'
+    ]
+  },
+  {
+    id: 'gold',
+    number: '07',
+    metal: 'Gold',
+    keyword: 'Mastery',
+    glyph: 'â˜‰',
+    symbol: 'âœ¨',
+    color: '#FFD700',
+    colorRgb: '255,215,0',
+    bg: 'rgba(255,215,0,.05)',
+    pillar: 'Mastery',
+    description: 'Gold represents the alchemical ideal &mdash; the integration of all that came before into a life of genuine mastery. You are no longer fighting your nature; you are expressing it fully. Financially free, personally grounded, spiritually alive. At this level you begin to transmit what you have become simply by living it.',
+    modules: [
+      'Financial independence: achieving the number that sets you free',
+      'Legacy planning: what you will leave behind',
+      'Mastery and the 10,000 hours principle applied to wealth-building',
+      'Teaching and mentoring: the deepening of your own understanding',
+      'Designing your ideal life architecture'
+    ],
+    criteria: [
+      'My passive income covers at least 50% of my living expenses',
+      'I have achieved at least one major financial milestone I once thought impossible',
+      'I mentor or coach others in some capacity',
+      'I live according to a clear personal philosophy that I have articulated',
+      'I feel genuine gratitude for my life more often than I feel lack',
+      'I have designed my days around my energy and values, not just obligations',
+      'I experience meaningful work that I would do even without financial reward',
+      'My close relationships are characterised by depth, honesty, and mutual growth',
+      'I regularly create or produce something of lasting value',
+      'I feel that I am becoming the truest version of myself'
+    ]
+  },
+  {
+    id: 'palladium',
+    number: '08',
+    metal: 'Palladium',
+    keyword: 'Transcendence',
+    glyph: 'âŠ•',
+    symbol: 'ðŸŒŸ',
+    color: '#CEDCE6',
+    colorRgb: '206,220,230',
+    bg: 'rgba(206,220,230,.05)',
+    pillar: 'Spirit',
+    description: 'Palladium is rarer than Gold and more precious &mdash; it represents the final transmutation, where personal transformation expands into service of something greater than the self. At this stage the alchemist becomes a living catalyst, touching others simply through presence, and building a legacy that outlasts their own lifetime.',
+    modules: [
+      'The philosophy of enough: abundance beyond accumulation',
+      'Charitable giving, impact investing, and conscious capitalism',
+      'Building institutions and communities that outlast you',
+      'The spiritual dimension of wealth and service',
+      'Writing, teaching, and transmitting your philosophy to the world'
+    ],
+    criteria: [
+      'My financial life is fully structured to generate income without my daily attention',
+      'I am actively engaged in a cause larger than my personal wellbeing',
+      'I give generously and feel no sense of loss in doing so',
+      'I have articulated and documented a personal philosophy or teaching',
+      'I feel deeply connected to something beyond my individual existence',
+      'I regularly experience awe, wonder, and reverence for life',
+      'I have helped at least one person achieve a breakthrough they could not have reached alone',
+      'I feel equally at ease with success and with simplicity',
+      'I no longer define myself primarily by what I own or achieve',
+      'I sense that the best contribution I can make is simply to be who I fully am'
+    ]
+  }
+];
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   STATE
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+const state = JSON.parse(localStorage.getItem('tap_levels_v1') || '{}');
+
+function saveState() {
+  localStorage.setItem('tap_levels_v1', JSON.stringify(state));
+}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RENDER SIDEBAR
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+function renderSidebar() {
+  const container = document.getElementById('progressSteps');
+  container.innerHTML = '';
+  let completed = 0;
+  LEVELS.forEach((lvl, i) => {
+    const checks = state[lvl.id] || [];
+    const count = checks.filter(Boolean).length;
+    const isComplete = count >= 5;
+    if (isComplete) completed++;
+    const div = document.createElement('div');
+    div.className = 'progress-step' + (isComplete ? ' completed' : '');
+    div.style.setProperty('--metal', lvl.color);
+    div.innerHTML = `
+      <div class="step-dot" style="border-color:${isComplete ? lvl.color : 'rgba(255,255,255,.15)'};color:${lvl.color};"></div>
+      <div>
+        <div class="step-name" style="color:${isComplete ? lvl.color : 'var(--muted)'}">${lvl.metal}</div>
+        <div class="step-sub">${lvl.keyword}</div>
+      </div>`;
+    div.addEventListener('click', () => {
+      document.getElementById('level-' + lvl.id).scrollIntoView({behavior:'smooth'});
+    });
+    container.appendChild(div);
+  });
+  const pct = Math.round((completed / 7) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = completed + ' / 7 levels';
+}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RENDER LEVEL CARDS
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+function renderCards() {
+  const container = document.getElementById('levelCards');
+  container.innerHTML = '';
+  LEVELS.forEach((lvl, idx) => {
+    const checks = state[lvl.id] || new Array(10).fill(false);
+    if (!state[lvl.id]) state[lvl.id] = new Array(10).fill(false);
+    const count = checks.filter(Boolean).length;
+    const isMatch = count >= 5;
+
+    const card = document.createElement('div');
+    card.className = 'level-card reveal';
+    card.id = 'level-' + lvl.id;
+    card.style.setProperty('--metal-color', lvl.color);
+    card.style.setProperty('--metal-rgb', lvl.colorRgb);
+
+    const criteriaHTML = lvl.criteria.map((c, i) => `
+      <li class="assess-item${checks[i] ? ' checked' : ''}" data-level="${lvl.id}" data-idx="${i}">
+        <div class="assess-check${checks[i] ? ' checked' : ''}" style="${checks[i] ? `background:${lvl.color};border-color:${lvl.color};` : ''}">
+          ${checks[i] ? '<span style="color:#0A0A0F;font-size:.65rem;font-weight:900;">âœ“</span>' : ''}
+        </div>
+        <span class="assess-label">${c}</span>
+      </li>`).join('');
+
+    const modulesHTML = lvl.modules.map(m => `<li>${m}</li>`).join('');
+
+    card.innerHTML = `
+      <div class="level-card-top" style="background:${lvl.bg};">
+        <div class="level-glyph" style="border-color:${lvl.color};color:${lvl.color};background:rgba(${lvl.colorRgb},.08);">
+          <span>${lvl.glyph}</span>
+        </div>
+        <div class="level-info">
+          <div class="level-meta">
+            <span class="level-badge" style="color:${lvl.color};border-color:${lvl.color};">Level ${idx + 1}</span>
+            <span class="level-keyword">${lvl.pillar}</span>
+          </div>
+          <div class="level-title">${lvl.metal}</div>
+          <div class="level-subtitle">The Stage of ${lvl.keyword}</div>
+        </div>
+        <div class="level-cert" style="border-color:${lvl.color};color:${lvl.color};">
+          <span class="cert-icon">${lvl.symbol}</span>
+          <span class="cert-text">Level ${idx + 1}</span>
+        </div>
+        <div class="level-number">${lvl.number}</div>
+      </div>
+      <div class="level-body">
+        <p class="level-description">${lvl.description}</p>
+        <div class="level-modules">
+          <h4>Course Modules</h4>
+          <ul class="module-list">${modulesHTML}</ul>
+        </div>
+        <div class="level-assess">
+          <h4>Self-Assessment &mdash; Tick all that apply to you now</h4>
+          <ul class="assess-list" id="assess-${lvl.id}">${criteriaHTML}</ul>
+          <div class="level-result${isMatch ? ' show' : ''}" id="result-${lvl.id}" style="border-color:rgba(${lvl.colorRgb},.3);background:rgba(${lvl.colorRgb},.07);">
+            <span class="level-result-icon">${lvl.symbol}</span>
+            <div class="level-result-text">
+              <strong style="color:${lvl.color};">You are at the ${lvl.metal} level!</strong>
+              You have ticked <span id="resultCount-${lvl.id}">${count}</span>/10 statements. This is your current stage of the Great Work.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="level-footer">
+        <div class="level-progress-text">
+          <span id="checkCount-${lvl.id}">${count}</span>/10 statements checked
+          ${isMatch ? `<span style="color:${lvl.color};margin-left:.5rem;">&mdash; Your Level âœ¦</span>` : ''}
+        </div>
+        <a href="/assessment" class="enroll-btn" style="background:linear-gradient(135deg,${lvl.color},rgba(${lvl.colorRgb},.7));color:#0A0A0F;">
+          Enroll in ${lvl.metal} Level
+        </a>
+      </div>`;
+
+    container.appendChild(card);
+  });
+
+  // Attach checkbox click events
+  document.querySelectorAll('.assess-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const levelId = item.dataset.level;
+      const idx = parseInt(item.dataset.idx);
+      state[levelId][idx] = !state[levelId][idx];
+      saveState();
+      updateCard(levelId);
+      renderSidebar();
+    });
+  });
+}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   UPDATE SINGLE CARD
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+function updateCard(levelId) {
+  const lvl = LEVELS.find(l => l.id === levelId);
+  const checks = state[levelId];
+  const count = checks.filter(Boolean).length;
+  const isMatch = count >= 5;
+
+  // Update checkboxes
+  document.querySelectorAll(`[data-level="${levelId}"]`).forEach(item => {
+    const idx = parseInt(item.dataset.idx);
+    const checked = checks[idx];
+    const box = item.querySelector('.assess-check');
+    const label = item.querySelector('.assess-label');
+    if (checked) {
+      item.classList.add('checked');
+      box.classList.add('checked');
+      box.style.background = lvl.color;
+      box.style.borderColor = lvl.color;
+      box.innerHTML = '<span style="color:#0A0A0F;font-size:.65rem;font-weight:900;">âœ“</span>';
+    } else {
+      item.classList.remove('checked');
+      box.classList.remove('checked');
+      box.style.background = '';
+      box.style.borderColor = '';
+      box.innerHTML = '';
+    }
+  });
+
+  // Update count display
+  const countEl = document.getElementById('checkCount-' + levelId);
+  const resultCountEl = document.getElementById('resultCount-' + levelId);
+  if (countEl) countEl.textContent = count;
+  if (resultCountEl) resultCountEl.textContent = count;
+
+  // Show/hide result banner
+  const resultEl = document.getElementById('result-' + levelId);
+  if (resultEl) {
+    if (isMatch) resultEl.classList.add('show');
+    else resultEl.classList.remove('show');
+  }
+
+  // Check if highest matching level should update overall result
+  checkOverallResult();
+}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   OVERALL RESULT
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+function checkOverallResult() {
+  let highestLevel = null;
+  LEVELS.forEach(lvl => {
+    const checks = state[lvl.id] || [];
+    const count = checks.filter(Boolean).length;
+    if (count >= 5) highestLevel = lvl;
+  });
+
+  const el = document.getElementById('overallResult');
+  if (highestLevel) {
+    document.getElementById('overallSymbol').textContent = highestLevel.symbol;
+    document.getElementById('overallTitle').textContent = `You are at the ${highestLevel.metal} Level`;
+    document.getElementById('overallDesc').innerHTML =
+      `Based on your self-assessment, your current stage of the Great Work is <strong style="color:${highestLevel.color}">${highestLevel.metal} &mdash; The Stage of ${highestLevel.keyword}</strong>. Scroll up to enrol in this level and begin your next transmutation.`;
+    el.style.borderColor = `rgba(${highestLevel.colorRgb},.4)`;
+    el.style.boxShadow = `0 0 60px rgba(${highestLevel.colorRgb},.1)`;
+    el.classList.add('show');
+  } else {
+    el.classList.remove('show');
+  }
+}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   SCROLL REVEAL
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+function initReveal() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   NAVBAR
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+(function(){function fixNav(){var nav=document.querySelector('.nav');if(!nav)return;document.querySelectorAll('section,[id^="section-"],[class*="sy-section"],[class*="sy-lp"],[class*="sy-row"],[class*="sy-col"],[class*="sy-element"]').forEach(function(el){if(el.contains(nav)){el.style.setProperty('padding-top','0','important');el.style.setProperty('margin-top','0','important');}});}fixNav();window.addEventListener('load',fixNav);setTimeout(fixNav,500);})();
+(function(){function f(){document.querySelectorAll('footer,[class*="website-footer"],[class*="sy-footer"]').forEach(function(e){if(!e.querySelector('.footer-copy'))e.style.setProperty('display','none','important');});}f();window.addEventListener('load',f);setTimeout(f,800);})();
+(function(){var p=window.location.pathname.replace(/\/$/,'')||'/';document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(function(a){a.classList.remove('active');try{var ap=new URL(a.href,window.location.origin).pathname.replace(/\/$/,'')||'/';if(ap===p)a.classList.add('active');}catch(e){}});})();
+window.addEventListener('scroll',function(){
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+});
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   INIT
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+(function init(){
+  axBuildTabs();
+  var params=new URLSearchParams(window.location.search);
+  var stage=params.get('stage')||'lead';
+  if(AX_STAGES.find(function(s){return s.id===stage;}))axSwitchTo(stage);
+  else axSwitchTo('lead');
+})();
+</script>
+<script>
+(function(){
+var CSS=`
+#tap-chat-btn{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9000;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#C8960A,#a07800);box-shadow:0 4px 20px rgba(200,150,10,.5);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s;}
+#tap-chat-btn:hover{transform:scale(1.08);}
+#tap-chat-btn svg{width:26px;height:26px;fill:#fff;}
+#tap-chat-win{position:fixed;bottom:5rem;right:1.5rem;z-index:9001;width:340px;max-width:calc(100vw - 2rem);background:#0d1f3c;border:1px solid rgba(200,150,10,.3);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;flex-direction:column;overflow:hidden;font-family:'Lato',sans-serif;}
+#tap-chat-win.open{display:flex;}
+#tap-chat-header{background:linear-gradient(135deg,#0d1f3c,#1a3a6b);padding:1rem 1.25rem;display:flex;align-items:center;gap:.75rem;border-bottom:1px solid rgba(200,150,10,.2);}
+#tap-chat-header .ch-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#C8960A,#a07800);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;}
+#tap-chat-header .ch-info{flex:1;}
+#tap-chat-header .ch-name{font-size:.85rem;font-weight:700;color:#C8960A;font-family:'Cinzel',serif;}
+#tap-chat-header .ch-status{font-size:.68rem;color:rgba(255,255,255,.5);}
+#tap-chat-header .ch-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:1.3rem;cursor:pointer;padding:0;line-height:1;}
+#tap-chat-header .ch-close:hover{color:#fff;}
+#tap-chat-msgs{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.6rem;max-height:320px;}
+#tap-chat-msgs::-webkit-scrollbar{width:3px;}
+#tap-chat-msgs::-webkit-scrollbar-thumb{background:rgba(200,150,10,.3);border-radius:3px;}
+.tc-msg{max-width:85%;padding:.65rem .9rem;border-radius:12px;font-size:.8rem;line-height:1.55;}
+.tc-msg.bot{background:rgba(255,255,255,.06);color:rgba(255,255,255,.85);border-bottom-left-radius:3px;align-self:flex-start;}
+.tc-msg.user{background:linear-gradient(135deg,#C8960A,#a07800);color:#fff;border-bottom-right-radius:3px;align-self:flex-end;}
+.tc-msg a{color:#C8960A;text-decoration:underline;}
+.tc-msg.bot a{color:#f0c040;}
+#tap-quick-btns{display:flex;flex-wrap:wrap;gap:.4rem;padding:.5rem 1rem;}
+.tc-qbtn{background:rgba(200,150,10,.12);border:1px solid rgba(200,150,10,.3);color:#C8960A;border-radius:20px;padding:.35rem .75rem;font-size:.72rem;cursor:pointer;transition:all .2s;}
+.tc-qbtn:hover{background:rgba(200,150,10,.25);}
+#tap-chat-input-row{display:flex;gap:.5rem;padding:.75rem 1rem;border-top:1px solid rgba(200,150,10,.15);}
+#tap-chat-input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(200,150,10,.2);border-radius:20px;padding:.5rem .9rem;color:#fff;font-size:.8rem;outline:none;}
+#tap-chat-input::placeholder{color:rgba(255,255,255,.3);}
+#tap-chat-send{background:linear-gradient(135deg,#C8960A,#a07800);border:none;border-radius:50%;width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+#tap-chat-send svg{width:16px;height:16px;fill:#fff;}
+`;
+
+var style=document.createElement('style');
+style.textContent=CSS;
+document.head.appendChild(style);
+
+var html=`
+<button id="tap-chat-btn" onclick="tapChatToggle()" aria-label="Open chat">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+</button>
+<div id="tap-chat-win">
+  <div id="tap-chat-header">
+    <div class="ch-avatar">TAP</div>
+    <div class="ch-info">
+      <div class="ch-name">Alchemist Assistant</div>
+      <div class="ch-status">&#9679; Online â€” here to help</div>
+    </div>
+    <button class="ch-close" onclick="tapChatToggle()">&times;</button>
+  </div>
+  <div id="tap-chat-msgs"></div>
+  <div id="tap-quick-btns">
+    <button class="tc-qbtn" onclick="tapAsk('What is The Alchemist\'s Path?')">What is TAP?</button>
+    <button class="tc-qbtn" onclick="tapAsk('How do I find my level?')">Find my level</button>
+    <button class="tc-qbtn" onclick="tapAsk('What are the levels?')">The levels</button>
+    <button class="tc-qbtn" onclick="tapAsk('How much does it cost?')">Pricing</button>
+    <button class="tc-qbtn" onclick="tapAsk('How do I start?')">How to start</button>
+    <button class="tc-qbtn" onclick="tapAsk('Talk to a person')">Talk to someone</button>
+  </div>
+  <div id="tap-chat-input-row">
+    <input id="tap-chat-input" type="text" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')tapSend()">
+    <button id="tap-chat-send" onclick="tapSend()">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+`;
+
+var wrap=document.createElement('div');
+wrap.innerHTML=html;
+document.body.appendChild(wrap);
+
+var opened=false;
+var greeted=false;
+
+window.tapChatToggle=function(){
+  opened=!opened;
+  var win=document.getElementById('tap-chat-win');
+  win.classList.toggle('open',opened);
+  if(opened&&!greeted){
+    greeted=true;
+    setTimeout(function(){tapBot("Welcome to The Alchemist's Path! I'm your guide here. Ask me anything about the programme, levels, glossary, or pricing â€” or choose a quick topic below.");},300);
+  }
+};
+
+window.tapAsk=function(q){
+  tapUserMsg(q);
+  tapRespond(q);
+};
+
+window.tapSend=function(){
+  var input=document.getElementById('tap-chat-input');
+  var q=input.value.trim();
+  if(!q)return;
+  input.value='';
+  tapUserMsg(q);
+  tapRespond(q);
+};
+
+function tapUserMsg(text){
+  var msgs=document.getElementById('tap-chat-msgs');
+  var d=document.createElement('div');
+  d.className='tc-msg user';
+  d.textContent=text;
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function tapBot(text){
+  var msgs=document.getElementById('tap-chat-msgs');
+  var d=document.createElement('div');
+  d.className='tc-msg bot';
+  d.innerHTML=text;
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function tapRespond(q){
+  var ql=q.toLowerCase();
+  setTimeout(function(){
+    if(/thank|thanks|thank you|salamat|cheers|appreciate/i.test(ql)){
+      tapBot("You're welcome! Feel free to ask anything else. ðŸ˜Š");
+    } else if(/\bhello\b|\bhi\b|\bhey\b|good morning|good afternoon|good evening/i.test(ql)){
+      tapBot("Hello! How can I help you today?");
+    } else if(/what is|what'?s tap|alchemist path|about tap|this website|use of|purpose of/i.test(ql)){
+      tapBot("TAP is a transformation system by Andrew A. Porteous covering <strong>Financial Intelligence, Self-Development & Spiritual Awareness</strong>. Practical steps toward real freedom.");
+    } else if(/find my level|my level|quiz|test|which level/i.test(ql)){
+      tapBot("Take the free <strong>20-question quiz</strong> to find your level. <a href='lightbluealchemist_quiz.html'>Start here &rarr;</a>");
+    } else if(/levels|stages|lead|iron|steel|copper|silver|gold|palladium|tin/i.test(ql)){
+      tapBot("<strong>7 levels:</strong> Tin, Lead, Iron, Steel, Copper, Silver, Gold + Palladium (Mastery). Each has 12 modules. <a href='lightbluealchemist_levels.html'>View levels &rarr;</a>");
+    } else if(/cost|price|how much|payment|fee|euro|subscription|member/i.test(ql)){
+      tapBot("<strong>&euro;5.55/month</strong> â€” individual membership<br><strong>&euro;9.99/month</strong> â€” 12 for 12 Group with Andrew");
+    } else if(/start|begin|how to|getting started/i.test(ql)){
+      tapBot("Start with the free quiz to find your level, then go from there. <a href='lightbluealchemist_howtostart.html'>How to Start &rarr;</a>");
+    } else if(/glossary|terms|definitions|words/i.test(ql)){
+      tapBot("Over <strong>2,776 terms</strong> â€” Financial, Self-Development & Spiritual. Free, no login needed. <a href='lightbluealchemist_glossary.html'>Open Glossary &rarr;</a>");
+    } else if(/group|12 for 12|community|biweekly|meeting/i.test(ql)){
+      tapBot("<strong>12 for 12 Group</strong> â€” 12-month programme with Andrew. Biweekly meetings + community. <a href='lightbluealchemist_group.html'>Learn more &rarr;</a>");
+    } else if(/andrew|who is|trainer|coach/i.test(ql)){
+      tapBot("Andrew A. Porteous â€” trainer, coach, 35+ years experience. Financially free at 40. Based in Germany. <a href='lightbluealchemist_about.html'>His story &rarr;</a>");
+    } else if(/modules|courses|lessons|curriculum/i.test(ql)){
+      tapBot("<strong>12 modules per level.</strong> Module 1 = free assessment. Modules 2â€“11 = learning. Module 12 = final assessment. Lead level available now.");
+    } else if(/certificate|cert|completion/i.test(ql)){
+      tapBot("Yes! Printable certificates are issued when you complete each level.");
+    } else if(/contact|email|help|support|person|vanesa|human|real/i.test(ql)||/talk to/i.test(ql)){
+      tapBot("Contact <strong>Vanesa</strong> for personal support. <a href='lightbluealchemist_about.html#contact'>Contact form &rarr;</a>");
+    } else if(/login|log in|sign in|account|register/i.test(ql)){
+      tapBot("<a href='lightbluealchemist_login.html'>Log in &rarr;</a> or <a href='lightbluealchemist_register.html'>Create account &rarr;</a>");
+    } else {
+      tapBot("This website is <strong>The Alchemist's Path</strong> â€” a step-by-step transformation system by Andrew A. Porteous covering Financial Intelligence, Self-Development, and Spiritual Awareness. You start with a free quiz to find your level, then progress through courses, eBooks, and community support.<br><br>Not sure where to begin? <a href='lightbluealchemist_quiz.html'>Take the free quiz &rarr;</a>");
+    }
+  },600);
+}
+
+})();
+
+</script>
+</body>
+</html>
+
+
+
