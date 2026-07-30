@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Learn how to begin your journey on The Alchemist's Path. Follow the simple 7-step system to reduce overwhelm and take aligned action.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Start â€” The Alchemist's Path</title>
+<style>
+/* The Alchemist's Path â€” Signature Background (premium)
+   Universal page background. <link rel="stylesheet" href="assets/starlight-background.css"> */
+
+html, body { margin: 0; height: 100%; }
+
+  /* ---- Background ---- */
+  .alchemist-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    /* luminous center â†’ soft periwinkle edges for depth (premium vignette) */
+    background:
+      radial-gradient(130% 95% at 50% 28%,
+        #ffffff 0%, #f6f9ff 34%, #eaf1ff 64%, #dde8ff 86%, #d2e0ff 100%);
+  }
+  /* primary moonlight + sky blooms */
+  .alchemist-bg__glow {
+    position: absolute;
+    inset: -14%;
+    background:
+      radial-gradient(42vw 42vw at 15% 8%,  rgba(150,188,255,0.62) 0%, rgba(150,188,255,0) 60%),
+      radial-gradient(50vw 50vw at 88% 18%, rgba(190,214,255,0.55) 0%, rgba(190,214,255,0) 62%),
+      radial-gradient(46vw 44vw at 8% 94%,  rgba(116,158,245,0.34) 0%, rgba(116,158,245,0) 60%);
+    will-change: transform, opacity;
+    animation: alchemist-breathe 26s cubic-bezier(.4,0,.2,1) infinite alternate;
+  }
+  .alchemist-bg__glow--gold { display: none; }
+  /* still-water reflection band near the bottom */
+  .alchemist-bg__water {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 44%;
+    background: linear-gradient(180deg, rgba(214,229,255,0) 0%, rgba(202,222,255,0.40) 50%, rgba(178,206,255,0.62) 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 40%);
+            mask-image: linear-gradient(180deg, transparent 0%, #000 40%);
+  }
+  /* polished top sheen */
+  .alchemist-bg__sheen {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 32%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
+  }
+  /* soft framing vignette in pale blue (keeps focus on content) */
+  .alchemist-bg__vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(120% 120% at 50% 42%, rgba(210,224,255,0) 58%, rgba(186,209,255,0.5) 100%);
+  }
+  .alchemist-bg__stars { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+  @keyframes alchemist-breathe {
+    from { transform: translate3d(-1.5%,-1%,0) scale(1);    opacity: .92; }
+    to   { transform: translate3d(2%,1.5%,0)   scale(1.07); opacity: 1; }
+  }
+  @keyframes alchemist-breathe-2 {
+    from { transform: translate3d(1.5%,1%,0) scale(1.04); opacity: .55; }
+    to   { transform: translate3d(-2%,-1.5%,0) scale(1);  opacity: .9; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .alchemist-bg__glow, .alchemist-bg__glow--gold { animation: none; }
+  }
+
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Great+Vibes&display=swap');
+html,body{background:transparent!important;margin:0!important;padding:0!important;}
+body{background:transparent;color:#0D1B35;font-family:'Lato',sans-serif;line-height:1.7;overflow-x:hidden;}
+:root{--bg:rgba(255,255,255,0.55);--bg2:rgba(200,220,255,0.52);--bg3:rgba(160,194,255,0.42);--gold:#C8960A;--gold2:#A07800;--text:#0D1B35;--muted:#4A6282;--border:rgba(200,150,10,.35);--font-head:'Cinzel',serif;--font-body:'Lato',sans-serif;--font-quote:'Great Vibes',cursive;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+h1,h2,h3,h4{font-family:var(--font-head);color:var(--gold);letter-spacing:.06em;}
+a{color:var(--gold);text-decoration:none;transition:opacity .2s;}
+a:hover{opacity:.8;}
+.nav{position:fixed;top:0;width:100vw;margin-left:calc(50% - 50vw);z-index:99999;display:flex;align-items:center;justify-content:space-between;height:90px;padding:0 40px;background:rgba(255,255,255,.95);border-bottom:1px solid rgba(200,150,10,.18);backdrop-filter:blur(12px);transition:background .3s;}
+.nav.scrolled{background:rgba(255,255,255,.98);}.nav::before{content:"";position:absolute;top:-300px;left:0;right:0;height:300px;background:#ffffff;}
+.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;}
+.nav-logo-symbol{height:40px;width:auto;border-radius:4px;}
+.nav-logo-text{font-family:var(--font-head);font-size:.82rem;font-weight:700;color:#b8972a;letter-spacing:.08em;line-height:1.2;}
+.nav-logo-sub{font-family:var(--font-body);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:#2c2c3e;opacity:.7;}
+.nav-links{display:flex;align-items:center;gap:1.5rem;}
+.nav-links a{font-family:var(--font-body);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#2c2c3e;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:#b8972a;}
+.nav-login{font-family:var(--font-body);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#2c2c3e!important;border:1.5px solid rgba(44,44,62,.35);border-radius:3px;padding:6px 14px;transition:border-color .2s,color .2s;text-decoration:none;}
+.nav-login:hover{border-color:#b8972a;color:#b8972a!important;}
+.nav-cta{background:#b8972a;color:#ffffff!important;font-family:var(--font-head);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;border:none;cursor:pointer;transition:box-shadow .3s,transform .2s;text-decoration:none;}
+.nav-cta:hover{box-shadow:0 0 20px rgba(184,151,42,.4);transform:translateY(-1px);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:#b8972a;border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:90px;left:0;right:0;background:#faf8f3;border-bottom:2px solid #b8972a;padding:1.5rem 2rem;flex-direction:column;gap:1.25rem;z-index:999;}
+.mobile-menu a{font-family:var(--font-body);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:#2c2c3e;padding:.5rem 0;border-bottom:1px solid rgba(184,151,42,.15);}
+.mobile-menu.open{display:flex;}
+.btn-primary{background:linear-gradient(135deg,#FFD700 0%,#C8A400 50%,#FFD700 100%);background-size:200% auto;color:#0A0A0F;font-family:var(--font-head);font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 2.5rem;border-radius:3px;border:none;cursor:pointer;transition:background-position .4s,box-shadow .3s,transform .2s;text-decoration:none;display:inline-block;}
+.btn-primary:hover{background-position:right center;box-shadow:0 0 30px rgba(255,215,0,.5);transform:translateY(-2px);color:#0A0A0F;}
+.btn-outline{background:transparent;color:var(--gold);font-family:var(--font-head);font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;padding:.9rem 2.5rem;border-radius:3px;border:2px solid var(--gold);cursor:pointer;transition:background .3s,box-shadow .3s,transform .2s;text-decoration:none;display:inline-block;}
+.btn-outline:hover{background:rgba(255,215,0,.08);box-shadow:0 0 20px rgba(255,215,0,.2);transform:translateY(-2px);color:var(--gold);}
+.page-hero{padding:9rem 1.5rem 4rem;text-align:center;}
+.page-hero-inner{max-width:780px;margin:0 auto;}
+.eyebrow{font-family:var(--font-body);font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.8;margin-bottom:1.25rem;display:block;}
+.page-title{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;line-height:1.1;margin-bottom:1rem;}
+.page-subtitle{font-size:1.05rem;color:var(--muted);max-width:580px;margin:0 auto 2.5rem;line-height:1.85;}
+.section{padding:5rem 1.5rem;}
+.section-inner{max-width:860px;margin:0 auto;}
+.gold-line{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:1.25rem 0;}
+.intro-text{font-size:1rem;color:var(--muted);line-height:1.9;margin-bottom:2.5rem;background:var(--bg);border-left:3px solid var(--gold);padding:1.5rem 2rem;border-radius:0 8px 8px 0;}
+.starting-gently{background:var(--bg2);border:1px solid rgba(200,150,10,.2);border-radius:12px;padding:2.5rem 2.5rem;margin-bottom:2.5rem;text-align:center;}
+.sg-title{font-size:clamp(1.4rem,2.5vw,2rem);margin-bottom:.75rem;}
+.sg-text{font-size:.98rem;color:var(--muted);line-height:1.9;max-width:620px;margin:1.25rem auto 1.75rem;}
+.sg-steps{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem .4rem;}
+.sg-steps span{font-family:var(--font-head);font-size:.8rem;letter-spacing:.08em;color:var(--gold);background:rgba(200,150,10,.08);border:1px solid rgba(200,150,10,.25);border-radius:4px;padding:.35rem .75rem;}
+.sg-steps .sg-arrow{background:none;border:none;color:var(--muted);font-size:.9rem;padding:0;}
+.sg-last{background:linear-gradient(135deg,rgba(255,215,0,.18),rgba(200,150,10,.12))!important;border-color:rgba(200,150,10,.5)!important;font-weight:700;}
+.steps-grid{display:flex;flex-direction:column;gap:2rem;margin-bottom:3.5rem;}
+.step-card{display:flex;gap:1.75rem;align-items:flex-start;background:var(--bg2);border:1px solid rgba(200,150,10,.18);border-radius:10px;padding:2rem 2rem;text-decoration:none;color:inherit;transition:border-color .25s,box-shadow .25s,transform .2s;cursor:pointer;}
+.step-card:hover{border-color:rgba(200,150,10,.55);box-shadow:0 8px 28px rgba(200,150,10,.15);transform:translateY(-3px);}
+.step-num{flex-shrink:0;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#C8A400);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:#0A0A0F;}
+.step-body h3{font-size:1.1rem;margin-bottom:.5rem;color:var(--gold);}
+.step-body p{font-size:.95rem;color:var(--muted);line-height:1.85;}
+.motivation-block{background:var(--bg3);border-radius:12px;padding:2.5rem 2.5rem;margin-bottom:2.5rem;text-align:center;}
+.motivation-block h2{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:1.25rem;}
+.motivation-block p{font-size:1rem;color:var(--muted);line-height:1.9;max-width:640px;margin:0 auto;}
+.principle-block{border-top:1px solid var(--border);padding-top:2.5rem;text-align:center;}
+.principle-block h4{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.principle-block p{font-size:1rem;color:var(--muted);line-height:1.9;max-width:580px;margin:0 auto 2rem;}
+.cta-center{text-align:center;padding:3rem 0 1rem;}
+.footer{background:transparent;border-top:1px solid var(--border);padding:1.5rem;}
+.footer-bottom{max-width:1140px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.25rem;text-align:center;}
+.footer-links{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;}
+.footer-links a{font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.footer-copy{font-size:.72rem;color:var(--muted);}
+@media(max-width:768px){.nav{padding:.9rem 1.25rem;}.nav-links{display:none;}.hamburger{display:flex;}.step-card{flex-direction:column;gap:1rem;}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <a href="lightbluealchemist_full.html" class="nav-logo">
+    <img src="data:image/jpeg;base64,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" alt="The Alchemist's Path" class="nav-logo-symbol">
+    <div>
+      <div class="nav-logo-text">The Alchemists Path</div>
+      <div class="nav-logo-sub">by Andrew Porteous</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="lightbluealchemist_full.html">Home</a>
+    <a href="lightbluealchemist_levels.html">Levels</a>
+    <a href="lightbluealchemist_courses.html">Courses</a>
+    <a href="lightbluealchemist_videos.html">Videos</a>
+    <a href="lightbluealchemist_articles.html">Articles</a>
+    <a href="lightbluealchemist_glossary.html">Glossary</a>
+    <a href="lightbluealchemist_about.html">About</a>
+    <a href="lightbluealchemist_login.html" class="nav-login">Login</a>
+    <a href="lightbluealchemist_quiz.html" class="nav-cta">Begin Journey</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="lightbluealchemist_full.html">Home</a>
+  <a href="lightbluealchemist_levels.html">Levels</a>
+  <a href="lightbluealchemist_courses.html">Courses</a>
+  <a href="lightbluealchemist_videos.html">Videos</a>
+  <a href="lightbluealchemist_articles.html">Articles</a>
+  <a href="lightbluealchemist_glossary.html">Glossary</a>
+  <a href="lightbluealchemist_about.html">About</a>
+  <a href="lightbluealchemist_login.html">Login</a>
+  <a href="lightbluealchemist_quiz.html" class="nav-cta" style="text-align:center;margin-top:.5rem;">Begin Journey</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">The Alchemist's Path</span>
+    <h1 class="page-title">How to Start</h1>
+    <p class="page-subtitle">A practical, step-by-step pathway toward financial independence â€” one level at a time, without banging your head against the wall.</p>
+    <a href="/assessment" class="btn-primary">Find My Level &rarr;</a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="section-inner">
+
+    <div class="intro-text">
+      For many people, they will intuitively pick out what is needed for them. What many have found, including myself, is that it is no use at all to dream large and keep banging your head against a wall trying to break through it. How about a stairway where you could take one step at a time and still get to heaven, without all the headaches?
+    </div>
+
+    <div class="starting-gently">
+      <h2 class="sg-title">Starting Gently</h2>
+      <div class="gold-line"></div>
+      <p class="sg-text">Change for the better starts with a thought, then desire, commitment to small action, a simple plan, follow through, review, and repeat. It is important to underachieve in the beginning by taking baby steps:</p>
+      <div class="sg-steps">
+        <span>Move</span>
+        <span class="sg-arrow">â†’</span>
+        <span>Crawl</span>
+        <span class="sg-arrow">â†’</span>
+        <span>Wobble</span>
+        <span class="sg-arrow">â†’</span>
+        <span>Walk</span>
+        <span class="sg-arrow">â†’</span>
+        <span>Run</span>
+        <span class="sg-arrow">â†’</span>
+        <span>Fly</span>
+        <span class="sg-arrow">â†’</span>
+        <span class="sg-last">Materialise</span>
+      </div>
+    </div>
+
+    <div class="steps-grid">
+      <a href="lightbluealchemist_levels.html" class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Know Where You Are</h3>
+          <p>Perhaps the most efficient way might be to know what your problem is, or what your goals are. When you have written those down, things become a lot clearer. The next step is to read through the definitions at each level and determine where you stand right now.</p>
+        </div>
+      </a>
+      <a href="/assessment" class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Find Your Level</h3>
+          <p>Your first goal is simply the next Alchemist Level. Now we have a goal, point B, and where you are right now, point A. The 20-question quiz should help you understand your current level and the next step.</p>
+        </div>
+      </a>
+      <a href="lightbluealchemist_courses.html" class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Choose How to Continue</h3>
+          <p>After finding your level, you can continue with free resources, become a member for &euro;5.55/month (there is a 4 month commitment upfront), or join a 12 for 12 group for &euro;9.99/month.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="motivation-block">
+      <h2>The Motivation to Start</h2>
+      <div class="gold-line" style="margin:0 auto 1.5rem;"></div>
+      <p>Can you visualize what it would look like to never have to worry about money ever again? Bills are always paid, you never have to think which side of the menu to choose from, and more importantly, you have a healthy way of dealing with money so that it flows to you and expands rather than disappearing before the end of the month.</p>
+    </div>
+
+    <div class="principle-block">
+      <h4>Alchemist Principle</h4>
+      <p>An Alchemist believes that all effort has side effects. The effort you give to your financial situation will have other benefits in other areas of your life, which sometimes you recognize only later.</p>
+      <a href="lightbluealchemist_quiz.html" class="btn-primary">Take the Quiz &mdash; Free &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2025 <span style="color:#C8960A;">The Alchemist's Path</span> &middot; Andrew Allen Porteous</p>
+  </div>
+</footer>
+
+<script>
+/* The Alchemist's Path â€” Signature Background (premium twinkle field)
+   Depth-layered, parallax starlight with soft bokeh light and rare
+   diffraction-spike sparkles, in pale blue / white / faint gold.
+   Auto-mounts a fixed `.alchemist-bg` layer (or attaches to one you place).
+   Tune via data-density / data-speed. DPR-aware, pauses when hidden,
+   honors prefers-reduced-motion. */
+(function () {
+  'use strict';
+  var STAR = [[150,188,255],[190,214,255],[120,158,245],[240,245,255],[236,211,145],[200,150,10]];
+  var BOKEH = [[170,200,255],[200,220,255],[236,214,150]];
+  function rnd(a,b){ return a + Math.random()*(b-a); }
+
+  function Field(canvas, host) {
+    this.canvas = canvas; this.host = host; this.ctx = canvas.getContext('2d');
+    this.density = parseFloat(host.getAttribute('data-density') || 1);
+    this.speed = parseFloat(host.getAttribute('data-speed') || 1);
+    this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+    this.stars = []; this.bokeh = []; this.t = 0; this.last = 0; this.raf = null; this.running = false;
+    this.resize = this.resize.bind(this); this.tick = this.tick.bind(this);
+    this.resize();
+    addEventListener('resize', this.resize, { passive: true });
+    document.addEventListener('visibilitychange', function(){ document.hidden ? this.stop() : this.start(); }.bind(this));
+    this.reduced ? this.draw(true) : this.start();
+  }
+  Field.prototype.build = function () {
+    var w=this.w, h=this.h, area=w*h, i;
+    var n = Math.max(60, Math.min(260, Math.round(area/7600 * this.density)));
+    this.stars = [];
+    for (i=0;i<n;i++){
+      var roll = Math.random();
+      var idx = roll<.28?0 : roll<.48?1 : roll<.62?2 : roll<.84?3 : roll<.965?4 : 5;
+      var z = Math.random();
+      var r = rnd(.5,.9) + z*(idx>=4?1.5:1.8);
+      this.stars.push({
+        x: Math.random()*w, y: Math.random()*h, z: z, r: r,
+        baseA: rnd(.30,.55) + z*0.4,
+        tw: rnd(.4,1.7), phase: rnd(0,Math.PI*2),
+        vx: rnd(-.025,.025)*this.speed*(0.4+z),
+        vy: rnd(-.025,.025)*this.speed*(0.4+z),
+        c: STAR[idx], halo: r > 0.95,
+        spike: r > 1.05 || idx>=4
+      });
+    }
+    var bn = Math.max(5, Math.min(14, Math.round(area/150000 * this.density)));
+    this.bokeh = [];
+    for (i=0;i<bn;i++){
+      var bz = Math.random();
+      this.bokeh.push({
+        x: Math.random()*w, y: Math.random()*h,
+        r: rnd(46,120) * (0.6+bz), a: rnd(0.05,0.12),
+        tw: rnd(0.15,0.5), phase: rnd(0,Math.PI*2),
+        vx: rnd(-.02,.02)*this.speed, vy: rnd(-.02,.02)*this.speed,
+        c: BOKEH[(Math.random()<0.18)?2:(Math.random()<0.5?0:1)]
+      });
+    }
+  };
+  Field.prototype.resize = function () {
+    this.w = this.host.clientWidth || innerWidth;
+    this.h = this.host.clientHeight || innerHeight;
+    this.canvas.width = Math.floor(this.w*this.dpr);
+    this.canvas.height = Math.floor(this.h*this.dpr);
+    this.ctx.setTransform(this.dpr,0,0,this.dpr,0,0);
+    this.build();
+    if (this.reduced) this.draw(true);
+  };
+  Field.prototype.disc = function (b, a) {
+    var ctx=this.ctx, col=b.c[0]+','+b.c[1]+','+b.c[2];
+    var g=ctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r);
+    g.addColorStop(0,'rgba('+col+','+a+')'); g.addColorStop(.6,'rgba('+col+','+(a*.4)+')'); g.addColorStop(1,'rgba('+col+',0)');
+    ctx.fillStyle=g; ctx.beginPath(); ctx.arc(b.x,b.y,b.r,0,7); ctx.fill();
+  };
+  Field.prototype.spike = function (s, a) {
+    var ctx=this.ctx, col=s.c[0]+','+s.c[1]+','+s.c[2], len=s.r*8;
+    var g=ctx.createLinearGradient(s.x-len,s.y,s.x+len,s.y);
+    g.addColorStop(0,'rgba('+col+',0)'); g.addColorStop(.5,'rgba('+col+','+(a*.65)+')'); g.addColorStop(1,'rgba('+col+',0)');
+    ctx.strokeStyle=g; ctx.lineWidth=.9;
+    ctx.beginPath(); ctx.moveTo(s.x-len,s.y); ctx.lineTo(s.x+len,s.y); ctx.stroke();
+    var g2=ctx.createLinearGradient(s.x,s.y-len,s.x,s.y+len);
+    g2.addColorStop(0,'rgba('+col+',0)'); g2.addColorStop(.5,'rgba('+col+','+(a*.65)+')'); g2.addColorStop(1,'rgba('+col+',0)');
+    ctx.strokeStyle=g2;
+    ctx.beginPath(); ctx.moveTo(s.x,s.y-len); ctx.lineTo(s.x,s.y+len); ctx.stroke();
+  };
+  Field.prototype.star = function (s, a) {
+    var ctx=this.ctx, col=s.c[0]+','+s.c[1]+','+s.c[2];
+    if (s.halo) {
+      var rg=ctx.createRadialGradient(s.x,s.y,0,s.x,s.y,s.r*6);
+      rg.addColorStop(0,'rgba('+col+','+(a*.55)+')'); rg.addColorStop(1,'rgba('+col+',0)');
+      ctx.fillStyle=rg; ctx.beginPath(); ctx.arc(s.x,s.y,s.r*6,0,7); ctx.fill();
+    }
+    if (s.spike && a>0.22) this.spike(s,a);
+    ctx.fillStyle='rgba('+col+','+a+')';
+    ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,7); ctx.fill();
+  };
+  Field.prototype.draw = function (stat) {
+    var ctx=this.ctx, i, s, b; ctx.clearRect(0,0,this.w,this.h);
+    for (i=0;i<this.bokeh.length;i++){ b=this.bokeh[i]; this.disc(b, stat ? b.a : b.a*(.7+.3*Math.sin(this.t*b.tw+b.phase))); }
+    for (i=0;i<this.stars.length;i++){ s=this.stars[i]; this.star(s, stat ? s.baseA : Math.max(0, s.baseA*(.5+.5*Math.sin(this.t*s.tw+s.phase)))); }
+  };
+  Field.prototype.tick = function (now) {
+    if (!this.running) return;
+    var dt = this.last ? (now-this.last)/1000 : .016; this.last=now; this.t+=dt;
+    var i, s, b;
+    for (i=0;i<this.bokeh.length;i++){ b=this.bokeh[i]; b.x+=b.vx; b.y+=b.vy;
+      if (b.y<-b.r) b.y=this.h+b.r; if (b.y>this.h+b.r) b.y=-b.r; if (b.x<-b.r) b.x=this.w+b.r; if (b.x>this.w+b.r) b.x=-b.r; }
+    for (i=0;i<this.stars.length;i++){ s=this.stars[i]; s.x+=s.vx; s.y+=s.vy;
+      if (s.y<-10) s.y=this.h+10; if (s.y>this.h+10) s.y=-10; if (s.x<-10) s.x=this.w+10; if (s.x>this.w+10) s.x=-10; }
+    this.draw(false);
+    this.raf=requestAnimationFrame(this.tick);
+  };
+  Field.prototype.start = function (){ if(this.running||this.reduced) return; this.running=true; this.last=0; this.raf=requestAnimationFrame(this.tick); };
+  Field.prototype.stop = function (){ this.running=false; if(this.raf) cancelAnimationFrame(this.raf); };
+
+  function build(host) {
+    host.classList.add('alchemist-bg');
+    if (host.querySelector('.alchemist-bg__stars')) return;
+    ['alchemist-bg__glow','alchemist-bg__glow alchemist-bg__glow--gold','alchemist-bg__sheen'].forEach(function(c){
+      var d=document.createElement('div'); d.className=c; host.appendChild(d);
+    });
+    var canvas=document.createElement('canvas'); canvas.className='alchemist-bg__stars'; host.appendChild(canvas);
+    ['alchemist-bg__water','alchemist-bg__vignette'].forEach(function(c){
+      var d=document.createElement('div'); d.className=c; host.appendChild(d);
+    });
+    return new Field(canvas, host);
+  }
+  window.AlchemistBackground = { mount: function(el){ var h=typeof el==='string'?document.querySelector(el):el; return h?build(h):null; } };
+
+  function auto(){ var el=document.querySelector('.alchemist-bg'); if(!el){ el=document.createElement('div'); document.body.appendChild(el); } build(el); }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', auto);
+  else auto();
+})();
+
+</script>
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);});
+(function(){var p=window.location.pathname.replace(/\/$/,'')||'/';document.querySelectorAll('.nav-links a:not(.nav-cta):not(.nav-login)').forEach(function(a){a.classList.remove('active');try{var ap=new URL(a.href,window.location.origin).pathname.replace(/\/$/,'')||'/';if(ap===p)a.classList.add('active');}catch(e){}});})();
+</script>
+<script>
+(function(){
+var CSS=`
+#tap-chat-btn{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9000;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#C8960A,#a07800);box-shadow:0 4px 20px rgba(200,150,10,.5);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s;}
+#tap-chat-btn:hover{transform:scale(1.08);}
+#tap-chat-btn svg{width:26px;height:26px;fill:#fff;}
+#tap-chat-win{position:fixed;bottom:5rem;right:1.5rem;z-index:9001;width:340px;max-width:calc(100vw - 2rem);background:#0d1f3c;border:1px solid rgba(200,150,10,.3);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;flex-direction:column;overflow:hidden;font-family:'Lato',sans-serif;}
+#tap-chat-win.open{display:flex;}
+#tap-chat-header{background:linear-gradient(135deg,#0d1f3c,#1a3a6b);padding:1rem 1.25rem;display:flex;align-items:center;gap:.75rem;border-bottom:1px solid rgba(200,150,10,.2);}
+#tap-chat-header .ch-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#C8960A,#a07800);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;}
+#tap-chat-header .ch-info{flex:1;}
+#tap-chat-header .ch-name{font-size:.85rem;font-weight:700;color:#C8960A;font-family:'Cinzel',serif;}
+#tap-chat-header .ch-status{font-size:.68rem;color:rgba(255,255,255,.5);}
+#tap-chat-header .ch-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:1.3rem;cursor:pointer;padding:0;line-height:1;}
+#tap-chat-header .ch-close:hover{color:#fff;}
+#tap-chat-msgs{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.6rem;max-height:320px;}
+#tap-chat-msgs::-webkit-scrollbar{width:3px;}
+#tap-chat-msgs::-webkit-scrollbar-thumb{background:rgba(200,150,10,.3);border-radius:3px;}
+.tc-msg{max-width:85%;padding:.65rem .9rem;border-radius:12px;font-size:.8rem;line-height:1.55;}
+.tc-msg.bot{background:rgba(255,255,255,.06);color:rgba(255,255,255,.85);border-bottom-left-radius:3px;align-self:flex-start;}
+.tc-msg.user{background:linear-gradient(135deg,#C8960A,#a07800);color:#fff;border-bottom-right-radius:3px;align-self:flex-end;}
+.tc-msg a{color:#C8960A;text-decoration:underline;}
+.tc-msg.bot a{color:#f0c040;}
+#tap-quick-btns{display:flex;flex-wrap:wrap;gap:.4rem;padding:.5rem 1rem;}
+.tc-qbtn{background:rgba(200,150,10,.12);border:1px solid rgba(200,150,10,.3);color:#C8960A;border-radius:20px;padding:.35rem .75rem;font-size:.72rem;cursor:pointer;transition:all .2s;}
+.tc-qbtn:hover{background:rgba(200,150,10,.25);}
+#tap-chat-input-row{display:flex;gap:.5rem;padding:.75rem 1rem;border-top:1px solid rgba(200,150,10,.15);}
+#tap-chat-input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(200,150,10,.2);border-radius:20px;padding:.5rem .9rem;color:#fff;font-size:.8rem;outline:none;}
+#tap-chat-input::placeholder{color:rgba(255,255,255,.3);}
+#tap-chat-send{background:linear-gradient(135deg,#C8960A,#a07800);border:none;border-radius:50%;width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+#tap-chat-send svg{width:16px;height:16px;fill:#fff;}
+`;
+
+var style=document.createElement('style');
+style.textContent=CSS;
+document.head.appendChild(style);
+
+var html=`
+<button id="tap-chat-btn" onclick="tapChatToggle()" aria-label="Open chat">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+</button>
+<div id="tap-chat-win">
+  <div id="tap-chat-header">
+    <div class="ch-avatar">TAP</div>
+    <div class="ch-info">
+      <div class="ch-name">Alchemist Assistant</div>
+      <div class="ch-status">&#9679; Online â€” here to help</div>
+    </div>
+    <button class="ch-close" onclick="tapChatToggle()">&times;</button>
+  </div>
+  <div id="tap-chat-msgs"></div>
+  <div id="tap-quick-btns">
+    <button class="tc-qbtn" onclick="tapAsk('What is The Alchemist\'s Path?')">What is TAP?</button>
+    <button class="tc-qbtn" onclick="tapAsk('How do I find my level?')">Find my level</button>
+    <button class="tc-qbtn" onclick="tapAsk('What are the levels?')">The levels</button>
+    <button class="tc-qbtn" onclick="tapAsk('How much does it cost?')">Pricing</button>
+    <button class="tc-qbtn" onclick="tapAsk('How do I start?')">How to start</button>
+    <button class="tc-qbtn" onclick="tapAsk('Talk to a person')">Talk to someone</button>
+  </div>
+  <div id="tap-chat-input-row">
+    <input id="tap-chat-input" type="text" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')tapSend()">
+    <button id="tap-chat-send" onclick="tapSend()">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+`;
+
+var wrap=document.createElement('div');
+wrap.innerHTML=html;
+document.body.appendChild(wrap);
+
+var opened=false;
+var greeted=false;
+
+window.tapChatToggle=function(){
+  opened=!opened;
+  var win=document.getElementById('tap-chat-win');
+  win.classList.toggle('open',opened);
+  if(opened&&!greeted){
+    greeted=true;
+    setTimeout(function(){tapBot("Welcome to The Alchemist's Path! I'm your guide here. Ask me anything about the programme, levels, glossary, or pricing â€” or choose a quick topic below.");},300);
+  }
+};
+
+window.tapAsk=function(q){
+  tapUserMsg(q);
+  tapRespond(q);
+};
+
+window.tapSend=function(){
+  var input=document.getElementById('tap-chat-input');
+  var q=input.value.trim();
+  if(!q)return;
+  input.value='';
+  tapUserMsg(q);
+  tapRespond(q);
+};
+
+function tapUserMsg(text){
+  var msgs=document.getElementById('tap-chat-msgs');
+  var d=document.createElement('div');
+  d.className='tc-msg user';
+  d.textContent=text;
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function tapBot(text){
+  var msgs=document.getElementById('tap-chat-msgs');
+  var d=document.createElement('div');
+  d.className='tc-msg bot';
+  d.innerHTML=text;
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function tapRespond(q){
+  var ql=q.toLowerCase();
+  setTimeout(function(){
+    if(/thank|thanks|thank you|salamat|cheers|appreciate/i.test(ql)){
+      tapBot("You're welcome! Feel free to ask anything else. ðŸ˜Š");
+    } else if(/\bhello\b|\bhi\b|\bhey\b|good morning|good afternoon|good evening/i.test(ql)){
+      tapBot("Hello! How can I help you today?");
+    } else if(/what is|what'?s tap|alchemist path|about tap|this website|use of|purpose of/i.test(ql)){
+      tapBot("TAP is a transformation system by Andrew Porteous covering <strong>Financial Intelligence, Self-Development & Spiritual Awareness</strong>. Practical steps toward real freedom.");
+    } else if(/find my level|my level|quiz|test|which level/i.test(ql)){
+      tapBot("Take the free <strong>20-question quiz</strong> to find your level. <a href='lightbluealchemist_quiz.html'>Start here &rarr;</a>");
+    } else if(/levels|stages|lead|iron|steel|copper|silver|gold|palladium|tin/i.test(ql)){
+      tapBot("<strong>7 levels:</strong> Tin, Lead, Iron, Steel, Copper, Silver, Gold + Palladium (Mastery). Each has 12 modules. <a href='lightbluealchemist_levels.html'>View levels &rarr;</a>");
+    } else if(/cost|price|how much|payment|fee|euro|subscription|member/i.test(ql)){
+      tapBot("<strong>&euro;5.55/month</strong> â€” individual membership<br><strong>&euro;9.99/month</strong> â€” 12 for 12 Group with Andrew");
+    } else if(/start|begin|how to|getting started/i.test(ql)){
+      tapBot("Start with the free quiz to find your level, then go from there. <a href='lightbluealchemist_howtostart.html'>How to Start &rarr;</a>");
+    } else if(/glossary|terms|definitions|words/i.test(ql)){
+      tapBot("Over <strong>2,776 terms</strong> â€” Financial, Self-Development & Spiritual. Free, no login needed. <a href='lightbluealchemist_glossary.html'>Open Glossary &rarr;</a>");
+    } else if(/group|12 for 12|community|biweekly|meeting/i.test(ql)){
+      tapBot("<strong>12 for 12 Group</strong> â€” 12-month programme with Andrew. Biweekly meetings + community. <a href='lightbluealchemist_group.html'>Learn more &rarr;</a>");
+    } else if(/andrew|who is|trainer|coach/i.test(ql)){
+      tapBot("Andrew Porteous â€” trainer, coach, 35+ years experience. Financially free at 40. Based in Germany. <a href='lightbluealchemist_about.html'>His story &rarr;</a>");
+    } else if(/modules|courses|lessons|curriculum/i.test(ql)){
+      tapBot("<strong>12 modules per level.</strong> Module 1 = free assessment. Modules 2â€“11 = learning. Module 12 = final assessment. Lead level available now.");
+    } else if(/certificate|cert|completion/i.test(ql)){
+      tapBot("Yes! Printable certificates are issued when you complete each level.");
+    } else if(/contact|email|help|support|person|vanesa|human|real/i.test(ql)||/talk to/i.test(ql)){
+      tapBot("Contact <strong>Vanesa</strong> for personal support. <a href='lightbluealchemist_about.html#contact'>Contact form &rarr;</a>");
+    } else if(/login|log in|sign in|account|register/i.test(ql)){
+      tapBot("<a href='lightbluealchemist_login.html'>Log in &rarr;</a> or <a href='lightbluealchemist_register.html'>Create account &rarr;</a>");
+    } else {
+      tapBot("This website is <strong>The Alchemist's Path</strong> â€” a step-by-step transformation system by Andrew Porteous covering Financial Intelligence, Self-Development, and Spiritual Awareness. You start with a free quiz to find your level, then progress through courses, eBooks, and community support.<br><br>Not sure where to begin? <a href='lightbluealchemist_quiz.html'>Take the free quiz &rarr;</a>");
+    }
+  },600);
+}
+
+})();
+
+</script>
+</body>
+</html>
