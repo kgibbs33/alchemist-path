@@ -85,7 +85,6 @@ body{font-family:var(--font-body);overflow-x:hidden;min-height:100vh;display:fle
         <button onclick="setLoginType(this,'Member')" class="login-type-btn active" style="flex:1;min-width:80px;">Member</button>
         <button onclick="setLoginType(this,'Affiliate')" class="login-type-btn" style="flex:1;min-width:80px;">Affiliate</button>
         <button onclick="setLoginType(this,'Admin')" class="login-type-btn" style="flex:1;min-width:80px;">Admin</button>
-        <button onclick="setLoginType(this,'Community')" class="login-type-btn" style="flex:1;min-width:100px;">Community</button>
       </div>
 
       <h1 class="login-title" id="loginTitle" style="display:none;"></h1>
@@ -113,8 +112,7 @@ body{font-family:var(--font-body);overflow-x:hidden;min-height:100vh;display:fle
     var loginTypes = {
       Member:    {title:"Member Login",    subtitle:"Welcome back. Sign in to continue your journey.",      btn:"Sign In as Member"},
       Affiliate: {title:"Affiliate Login", subtitle:"Access your affiliate dashboard and referral tools.",   btn:"Sign In as Affiliate"},
-      Admin:     {title:"Admin Login",     subtitle:"Administrator access for site and course management.",  btn:"Sign In as Admin"},
-      Community: {title:"Community Login", subtitle:"Join the conversation. Sign in to your community hub.", btn:"Sign In as Community User"}
+      Admin:     {title:"Admin Login",     subtitle:"Administrator access for site and course management.",  btn:"Sign In as Admin"}
     };
     function setLoginType(btn, type){
       document.querySelectorAll(".login-type-btn").forEach(function(b){b.classList.remove("active");});
