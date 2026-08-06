@@ -70,6 +70,17 @@ a:hover{opacity:.8;}
 .sg-steps span{font-family:var(--font-head);font-size:.8rem;letter-spacing:.08em;color:var(--gold);background:rgba(200,150,10,.08);border:1px solid rgba(200,150,10,.25);border-radius:4px;padding:.35rem .75rem;}
 .sg-steps .sg-arrow{background:none;border:none;color:var(--muted);font-size:.9rem;padding:0;}
 .sg-last{background:linear-gradient(135deg,rgba(255,215,0,.18),rgba(200,150,10,.12))!important;border-color:rgba(200,150,10,.5)!important;font-weight:700;}
+.sg-stairs{display:flex;align-items:flex-end;justify-content:center;gap:.75rem;margin:2rem auto 0;max-width:760px;flex-wrap:nowrap;}
+.sg-stair{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.sg-stair-badge{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#C8A400);color:#0A0A0F;font-family:var(--font-head);font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;margin-bottom:.6rem;flex-shrink:0;}
+.sg-stair-box{background:rgba(200,150,10,.08);border:1px solid rgba(200,150,10,.3);border-radius:6px;padding:.6rem .5rem;font-size:.72rem;color:var(--gold);line-height:1.35;width:100%;}
+.sg-stair:nth-child(1){margin-top:5.6rem;}
+.sg-stair:nth-child(2){margin-top:4.2rem;}
+.sg-stair:nth-child(3){margin-top:2.8rem;}
+.sg-stair:nth-child(4){margin-top:1.4rem;}
+.sg-stair:nth-child(5){margin-top:0;}
+.sg-stair:nth-child(5) .sg-stair-box{background:linear-gradient(135deg,rgba(255,215,0,.18),rgba(200,150,10,.12));border-color:rgba(200,150,10,.5);font-weight:700;}
+@media(max-width:768px){.sg-stairs{flex-direction:column;align-items:stretch;gap:.6rem;}.sg-stair{margin-top:0!important;flex-direction:row;justify-content:flex-start;text-align:left;gap:.75rem;}.sg-stair-badge{margin-bottom:0;}.sg-stair-box{width:auto;flex:1;text-align:left;}}
 .steps-grid{display:flex;flex-direction:column;gap:2rem;margin-bottom:3.5rem;}
 .step-card{display:flex;gap:1.75rem;align-items:flex-start;background:var(--bg2);border:1px solid rgba(200,150,10,.18);border-radius:10px;padding:2rem 2rem;text-decoration:none;color:inherit;transition:border-color .25s,box-shadow .25s,transform .2s;cursor:pointer;}
 .step-card:hover{border-color:rgba(200,150,10,.55);box-shadow:0 8px 28px rgba(200,150,10,.15);transform:translateY(-3px);}
@@ -135,7 +146,6 @@ a:hover{opacity:.8;}
     <span class="eyebrow">The Alchemist's Path</span>
     <h1 class="page-title">How to Start</h1>
     <p class="page-subtitle">A practical, step-by-step pathway toward financial independence â€” one level at a time, without banging your head against the wall.</p>
-    <a href="/assessment" class="btn-primary">Find My Level &rarr;</a>
   </div>
 </div>
 
@@ -151,20 +161,27 @@ a:hover{opacity:.8;}
       <h2 class="sg-title">Starting Gently</h2>
       <div class="gold-line"></div>
       <p class="sg-text">Change for the better starts with a thought, then desire, commitment to small action, a simple plan, follow through, review, and repeat. It is important to underachieve in the beginning by taking baby steps:</p>
-      <div class="sg-steps">
-        <span>Move</span>
-        <span class="sg-arrow">â†’</span>
-        <span>Crawl</span>
-        <span class="sg-arrow">â†’</span>
-        <span>Wobble</span>
-        <span class="sg-arrow">â†’</span>
-        <span>Walk</span>
-        <span class="sg-arrow">â†’</span>
-        <span>Run</span>
-        <span class="sg-arrow">â†’</span>
-        <span>Fly</span>
-        <span class="sg-arrow">â†’</span>
-        <span class="sg-last">Materialise</span>
+      <div class="sg-stairs">
+        <div class="sg-stair">
+          <div class="sg-stair-badge">1</div>
+          <div class="sg-stair-box">Change for the better starts with a thought</div>
+        </div>
+        <div class="sg-stair">
+          <div class="sg-stair-badge">2</div>
+          <div class="sg-stair-box">Small actions</div>
+        </div>
+        <div class="sg-stair">
+          <div class="sg-stair-badge">3</div>
+          <div class="sg-stair-box">A simple plan</div>
+        </div>
+        <div class="sg-stair">
+          <div class="sg-stair-badge">4</div>
+          <div class="sg-stair-box">Follow through</div>
+        </div>
+        <div class="sg-stair">
+          <div class="sg-stair-badge">5</div>
+          <div class="sg-stair-box">Review and repeat</div>
+        </div>
       </div>
     </div>
 
@@ -187,7 +204,7 @@ a:hover{opacity:.8;}
         <div class="step-num">3</div>
         <div class="step-body">
           <h3>Choose How to Continue</h3>
-          <p>After finding your level, you can continue with free resources, become a member for &euro;5.55/month (there is a 4 month commitment upfront), or join a 12 for 12 group for &euro;9.99/month.</p>
+          <p>After finding your level, you can continue with free resources, become a member for &euro;5.55/month (a 3-month commitment upfront, &euro;16.65 total), or join a 12 for 12 group for &euro;19.99/month.</p>
         </div>
       </a>
     </div>
@@ -349,7 +366,7 @@ function tapRespond(q){
     } else if(/levels|stages|lead|iron|steel|copper|silver|gold|palladium|tin/i.test(ql)){
       tapBot("<strong>7 levels:</strong> Tin, Lead, Iron, Steel, Copper, Silver, Gold + Palladium (Mastery). Each has 12 modules. <a href='lightbluealchemist_levels.html'>View levels &rarr;</a>");
     } else if(/cost|price|how much|payment|fee|euro|subscription|member/i.test(ql)){
-      tapBot("<strong>&euro;5.55/month</strong> â€” individual membership<br><strong>&euro;9.99/month</strong> â€” 12 for 12 Group with Andrew");
+      tapBot("<strong>&euro;5.55/month</strong> â€” individual membership<br><strong>&euro;19.99/month</strong> â€” 12 for 12 Group with Andrew");
     } else if(/start|begin|how to|getting started/i.test(ql)){
       tapBot("Start with the free quiz to find your level, then go from there. <a href='lightbluealchemist_howtostart.html'>How to Start &rarr;</a>");
     } else if(/glossary|terms|definitions|words/i.test(ql)){
