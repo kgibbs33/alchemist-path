@@ -80,7 +80,7 @@ a{color:var(--gold);text-decoration:none;}
 .qz-answer-btn.selected{border-color:#C8960A;background:rgba(200,150,10,.12);box-shadow:0 0 0 1px #C8960A;}
 .qz-ans-letter{font-family:var(--font-head);font-size:.72rem;font-weight:700;color:var(--gold);width:22px;flex-shrink:0;margin-top:1px;letter-spacing:.05em;}
 .qz-answer-btn.selected .qz-ans-letter{color:#C8960A;}
-.qz-ans-text{font-family:var(--font-body);font-size:.92rem;color:var(--text);line-height:1.6;}
+.qz-ans-text{font-family:var(--font-body);font-size:.92rem;color:#111;line-height:1.6;}
 .qz-next-btn{font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0A0A0F;background:linear-gradient(135deg,#FFD700 0%,#C8A400 50%,#FFD700 100%);background-size:200% auto;border:none;padding:14px 48px;cursor:pointer;border-radius:3px;transition:all .3s;opacity:.35;pointer-events:none;display:block;margin-left:auto;}
 .qz-next-btn.ready{opacity:1;pointer-events:auto;}
 .qz-next-btn.ready:hover{background-position:right center;box-shadow:0 0 24px rgba(255,215,0,.45);transform:translateY(-1px);}
@@ -211,6 +211,7 @@ a{color:var(--gold);text-decoration:none;}
     <div class="qi-card">
       <p class="qi-desc">This short quiz helps you discover where you currently stand on The Alchemist's Path. It looks at your financial reality, your habits, your income, your reserves, your relationship with money, your level of independence, and your deeper connection between wealth, self-development and spirit.</p>
       <p class="qi-note">There are no wrong answers. This is not a test of intelligence. It is simply a mirror. Choose the answer that feels most true for you right now.</p>
+      <p class="qi-note">Please complete the quiz to assess your current level. The quiz assesses your psychological level of awareness and development. The result may not necessarily reflect your actual physical, practical or financial position. You may feel that your practical position is different from your psychological result. You are therefore free to begin at a different level if you believe that is more appropriate. The final choice remains with the individual.</p>
       <div class="qi-meta">
         <span>&#9671; 20 Questions</span>
         <span>&#9671; 5 Minutes</span>
@@ -791,7 +792,7 @@ function tapRespond(q){
     } else if(/levels|stages|lead|iron|steel|copper|silver|gold|palladium|tin/i.test(ql)){
       tapBot("<strong>7 levels:</strong> Tin, Lead, Iron, Steel, Copper, Silver, Gold + Palladium (Mastery). Each has 12 modules. <a href='lightbluealchemist_levels.html'>View levels &rarr;</a>");
     } else if(/cost|price|how much|payment|fee|euro|subscription|member/i.test(ql)){
-      tapBot("<strong>&euro;5.55/month</strong> — individual membership<br><strong>&euro;9.99/month</strong> — 12 for 12 Group with Andrew");
+      tapBot("<strong>&euro;5.55/month</strong> — individual membership<br><strong>&euro;19.99/month</strong> — 12 for 12 Group with Andrew");
     } else if(/start|begin|how to|getting started/i.test(ql)){
       tapBot("Start with the free quiz to find your level, then go from there. <a href='lightbluealchemist_howtostart.html'>How to Start &rarr;</a>");
     } else if(/glossary|terms|definitions|words/i.test(ql)){
