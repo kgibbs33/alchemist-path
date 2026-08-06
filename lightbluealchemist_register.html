@@ -107,7 +107,7 @@ body{font-family:var(--font-body);overflow-x:hidden;min-height:100vh;display:fle
           <select class="form-select" id="regMembership">
             <option value="free">Free Member</option>
             <option value="member">Member — &euro;5.55/month</option>
-            <option value="group">12 for 12 Group — &euro;9.99/month</option>
+            <option value="group">12 for 12 Group — &euro;19.99/month</option>
           </select>
         </div>
         <button type="submit" class="reg-btn">Create Account &rarr;</button>
@@ -286,7 +286,7 @@ function tapRespond(q){
     } else if(/levels|stages|lead|iron|steel|copper|silver|gold|palladium|tin/i.test(ql)){
       tapBot("<strong>7 levels:</strong> Tin, Lead, Iron, Steel, Copper, Silver, Gold + Palladium (Mastery). Each has 12 modules. <a href='lightbluealchemist_levels.html'>View levels &rarr;</a>");
     } else if(/cost|price|how much|payment|fee|euro|subscription|member/i.test(ql)){
-      tapBot("<strong>&euro;5.55/month</strong> — individual membership<br><strong>&euro;9.99/month</strong> — 12 for 12 Group with Andrew");
+      tapBot("<strong>&euro;5.55/month</strong> — individual membership<br><strong>&euro;19.99/month</strong> — 12 for 12 Group with Andrew");
     } else if(/start|begin|how to|getting started/i.test(ql)){
       tapBot("Start with the free quiz to find your level, then go from there. <a href='lightbluealchemist_howtostart.html'>How to Start &rarr;</a>");
     } else if(/glossary|terms|definitions|words/i.test(ql)){
