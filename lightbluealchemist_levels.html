@@ -612,13 +612,20 @@ function axRenderContent(){
   if(s.quote){extra+='<div class="ax-level-quote"><blockquote>&ldquo;'+s.quote.text+'&rdquo;</blockquote><cite>&mdash; '+s.quote.author+'</cite></div>';}
   if(s.wording){extra+='<div class="ax-level-wording">'+s.wording+'</div>';}
   if(s.choices){extra+='<div class="ax-sec-label" style="margin-top:1.5rem;">Your Path Forward</div><div class="ax-choices">'+s.choices.map(function(c,i){return '<div class="ax-choice"><span class="ax-choice-num">'+(i+1)+'.</span><span>'+c+'</span></div>';}).join('')+'</div>';}
+  var closing=(s.id==='palladium')?(
+    '<hr class="ax-divider">'+
+    '<p style="text-align:center;font-style:italic;color:var(--muted);margin:0 0 16px;">Personal contact is required at the Palladium level. Please contact us to discuss the path forward.</p>'+
+    '<div style="text-align:center;margin-top:10px;"><a class="ax-begin-btn" href="lightbluealchemist_about.html#contact" style="text-decoration:none;">Personally contact Andrew</a></div>'
+  ):(
+    '<hr class="ax-divider">'+
+    '<div style="text-align:center;margin-top:10px;"><a class="ax-begin-btn" href="lightbluealchemist_assessment.html?stage='+s.id+'" style="text-decoration:none;">Begin Journey &rarr;</a></div>'
+  );
   document.getElementById('axContent').innerHTML=
     '<div class="ax-stage-heading"><div class="ax-stage-label">'+s.num+'</div><div class="ax-stage-title">'+s.name+' &mdash; '+s.virtue+'</div><div class="ax-tagline">'+s.tagline+'</div></div>'+
     '<div class="ax-sec-label">The Teaching</div>'+
         '<div class="ax-teaching">'+s.teaching.replace(/\n\n/g,'<br><br>')+'</div>'+
         extra+
-    '<hr class="ax-divider">'+
-    '<div style="text-align:center;margin-top:10px;"><a class="ax-begin-btn" href="lightbluealchemist_assessment.html?stage='+s.id+'" style="text-decoration:none;">Begin Journey &rarr;</a></div>';
+    closing;
 }
 function axShowPopup(id){
   document.getElementById(id).classList.add('show');
