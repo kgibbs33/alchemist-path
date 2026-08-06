@@ -40,9 +40,9 @@ a{color:var(--gold);text-decoration:none;}
 
 /* SEARCH */
 .search-wrap{max-width:600px;margin:0 auto;padding:0 1.5rem 2rem;position:relative;}
-.search-input{width:100%;padding:14px 48px 14px 18px;border:1.5px solid rgba(200,150,10,.3);border-radius:6px;background:rgba(255,255,255,.85);font-family:var(--font-body);font-size:.95rem;color:var(--text);outline:none;transition:border-color .2s;}
+.search-input{width:100%;padding:14px 48px 14px 18px;border:1.5px solid rgba(200,150,10,.3);border-radius:6px;background:rgba(255,255,255,.85);font-family:var(--font-body);font-size:.95rem;color:#111;outline:none;transition:border-color .2s;}
 .search-input:focus{border-color:var(--gold);}
-.search-input::placeholder{color:var(--muted);opacity:.6;}
+.search-input::placeholder{color:#5a5a5a;opacity:.85;}
 .search-icon{position:absolute;right:2rem;top:50%;transform:translateY(-50%);color:var(--muted);font-size:1rem;pointer-events:none;}
 
 /* FILTER TABS */
@@ -3043,9 +3043,9 @@ function loadMore(btn){
 }
 
 function filterGlossary(){
-  if(!activeCat){ document.getElementById('noResults').style.display='none'; return; }
-  document.querySelectorAll('.cat-block').forEach(function(b){ b.classList.add('hidden'); });
   var q=document.getElementById('glossarySearch').value.toLowerCase().trim();
+  if(!activeCat && !q){ document.getElementById('noResults').style.display='none'; return; }
+  document.querySelectorAll('.cat-block').forEach(function(b){ b.classList.add('hidden'); });
 
   if(!q){
     var count=0;
