@@ -470,24 +470,24 @@ a:hover{opacity:.8;}
         
       </div>
       <div class="reveal">
-        <form class="contact-form" onsubmit="submitForm(event)">
+        <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
           <div class="form-row">
             <div class="form-group">
               <label>First Name</label>
-              <input type="text" placeholder="Your first name" required>
+              <input type="text" name="firstName" placeholder="Your first name" required>
             </div>
             <div class="form-group">
               <label>Last Name</label>
-              <input type="text" placeholder="Your last name" required>
+              <input type="text" name="lastName" placeholder="Your last name" required>
             </div>
           </div>
           <div class="form-group">
             <label>Email Address</label>
-            <input type="email" placeholder="your@email.com" required>
+            <input type="email" name="email" placeholder="your@email.com" required>
           </div>
           <div class="form-group">
             <label>Subject</label>
-            <select required>
+            <select name="subject" required>
               <option value="" disabled selected>Select a subject</option>
               <option>General Enquiry</option>
               <option>Program Question</option>
@@ -499,7 +499,7 @@ a:hover{opacity:.8;}
           </div>
           <div class="form-group">
             <label>Your Current Level (Optional)</label>
-            <select>
+            <select name="level">
               <option value="" selected>I'm not sure yet</option>
               <option>Tin &mdash; Awareness</option>
               <option>Lead &mdash; Clarity</option>
@@ -513,11 +513,12 @@ a:hover{opacity:.8;}
           </div>
           <div class="form-group">
             <label>Message</label>
-            <textarea placeholder="Tell Andrew what's on your mind..." required></textarea>
+            <textarea name="message" placeholder="Tell Andrew what's on your mind..." required></textarea>
           </div>
           <div class="form-submit">
-            <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Send Message</button>
+            <button type="submit" class="btn-primary" id="contactSubmitBtn" style="width:100%;text-align:center;">Send Message</button>
             <p class="form-note">Your message is private and will only be read by Andrew.</p>
+            <p class="form-error" id="formError" style="display:none;color:#C0392B;margin-top:.75rem;font-size:.85rem;">Something went wrong sending your message. Please try again, or email us directly.</p>
           </div>
         </form>
         <div class="form-success" id="formSuccess">
@@ -558,8 +559,41 @@ function toggleMenu(){
 
 function submitForm(e) {
   e.preventDefault();
-  e.target.style.display = 'none';
-  document.getElementById('formSuccess').classList.add('show');
+  var form = e.target;
+  var btn = document.getElementById('contactSubmitBtn');
+  var errEl = document.getElementById('formError');
+  errEl.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  var fd = new FormData(form);
+  var payload = {
+    firstName: fd.get('firstName'),
+    lastName: fd.get('lastName'),
+    email: fd.get('email'),
+    subject: fd.get('subject'),
+    level: fd.get('level'),
+    message: fd.get('message')
+  };
+
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(function(res) {
+    if (!res.ok) throw new Error('Request failed');
+    return res.json();
+  })
+  .then(function() {
+    form.style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+  })
+  .catch(function() {
+    errEl.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+  });
 }
 
 (function initReveal() {
